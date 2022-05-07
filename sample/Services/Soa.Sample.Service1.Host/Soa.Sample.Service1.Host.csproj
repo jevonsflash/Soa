@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Abp" Version="7.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Soa.Server\Soa.Server.csproj" />
+    <ProjectReference Include="..\..\MainHost\Soa.Sample.EntityFrameworkCore\Soa.Sample.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Soa.Sample.Service1\Soa.Sample.Service1.csproj" />
+  </ItemGroup>
+
+</Project>

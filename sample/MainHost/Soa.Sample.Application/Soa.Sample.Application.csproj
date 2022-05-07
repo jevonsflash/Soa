@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>1.0.0.0</Version>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+    <AssemblyName>Soa.Sample.Application</AssemblyName>
+    <PackageId>Soa.Sample.Application</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>Soa.Sample</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Soa.Client\Soa.Client.csproj" />
+    <ProjectReference Include="..\..\Services.Abstract\Soa.Sample.IService1\Soa.Sample.IService1.csproj" />
+    <ProjectReference Include="..\..\Services.Abstract\Soa.Sample.IService2\Soa.Sample.IService2.csproj" />
+    <ProjectReference Include="..\Soa.Sample.Core\Soa.Sample.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Abp.EntityFrameworkCore" Version="7.1.0" />
+    <PackageReference Include="Abp.AutoMapper" Version="7.1.0" />
+  </ItemGroup>
+</Project>
