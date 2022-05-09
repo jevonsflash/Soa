@@ -27,7 +27,7 @@ namespace Soa.Client.Discovery
             this.soaClientConfiguration = soaClientConfiguration;
         }
 
-        public ServiceDiscoveryConfiguration Config => soaClientConfiguration.ServiceDiscovery;
+        public InServiceDiscoveryConfiguration Config => soaClientConfiguration.ServiceDiscovery;
 
 
         public override void Start()

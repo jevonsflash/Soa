@@ -26,6 +26,7 @@ using Soa.Server.Discovery;
 using Microsoft.Extensions.Hosting;
 using Soa.ServiceId;
 using Soa.Protocols.Service;
+using Soa.Server.ConsulDiscovery;
 
 namespace Soa.Server
 {
@@ -46,14 +47,15 @@ namespace Soa.Server
         {
 
             _appConfiguration = AppConfigurations.Get(
-typeof(SoaServerModule).GetAssembly().GetDirectoryPathOrNull(), env.EnvironmentName, env.IsDevelopment());
+            typeof(SoaServerModule).GetAssembly().GetDirectoryPathOrNull(), env.EnvironmentName, env.IsDevelopment());
             IocManager.Register<ISoaServerConfiguration, SoaServerConfiguration>();
+            Configuration.Modules.SoaServer().Name = _appConfiguration["SoaServer:Name"];
             Configuration.Modules.SoaServer().Ip = _appConfiguration["SoaServer:Ip"];
             Configuration.Modules.SoaServer().Port = int.Parse(_appConfiguration["SoaServer:Port"]);
             Configuration.Modules.SoaServer().Transport = _appConfiguration["SoaServer:Transport"];
-            Configuration.Modules.SoaServer().AssemblyNames = _appConfiguration["SoaServer:AssemblyNames"].Split(',') ;
-
-          
+            Configuration.Modules.SoaServer().AssemblyNames = _appConfiguration["SoaServer:AssemblyNames"].Split(',');
+            Configuration.Modules.SoaServer().Discovery = _appConfiguration["SoaServer:Discovery"];
+            Configuration.Modules.SoaServer().ConsulServiceDiscovery = _appConfiguration.GetSection("SoaServer:ConsulServiceDiscovery").Get<ConsulServiceDiscoveryConfiguration>();
         }
 
 
@@ -113,6 +115,38 @@ typeof(SoaServerModule).GetAssembly().GetDirectoryPathOrNull(), env.EnvironmentN
                 throw new Exception("不合法的Transport名称");
             }
 
+
+
+            if (config.Discovery == "Consul")
+            {
+                var consulIp = config.ConsulServiceDiscovery.Ip;
+                var consulPort = config.ConsulServiceDiscovery.Port;
+                var serviceCategory= "SoaService";
+                //var serviceCategory = $"{config.Name}.SoaService";
+                var serverAddress = $"{config.Ip}:{config.Port}";
+                IocManager.IocContainer.Register(Component.For<IServiceDiscovery, ConsulServiceDiscovery>()
+        .ImplementedBy<ConsulServiceDiscovery>()
+       .DependsOn(
+                        Dependency.OnValue("ip", consulIp),
+                        Dependency.OnValue("port", consulPort),
+                        Dependency.OnValue("serviceCategory", serviceCategory),
+                        Dependency.OnValue("serverAddress", serverAddress)
+                    )
+       .LifestyleSingleton());
+
+
+            }
+            else if (config.Discovery == "InServer")
+            {
+                IocManager.IocContainer.Register(Component.For<IServiceDiscovery, InServerServiceDiscovery>()
+  .ImplementedBy<InServerServiceDiscovery>()
+  .LifestyleSingleton());
+            }
+            else
+            {
+                throw new Exception("不合法的Discovery名称");
+            }
+
         }
 
         public async override void PostInitialize()
@@ -134,6 +168,10 @@ typeof(SoaServerModule).GetAssembly().GetDirectoryPathOrNull(), env.EnvironmentN
             await discovery.SetRoutesAsync(routes);
             await server.StartAsync();
             base.PostInitialize();
+
+
+
+
         }
 
 

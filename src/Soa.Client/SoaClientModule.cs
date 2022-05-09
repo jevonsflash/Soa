@@ -36,6 +36,8 @@ using Soa.Protocols.Service;
 using Soa.Protocols.Attributes;
 using Soa.Serializer;
 using Soa.TypeConverter;
+using Consul;
+using Soa.Configuration;
 
 namespace Soa
 {
@@ -63,7 +65,9 @@ namespace Soa
             Configuration.Modules.SoaClient().AssemblyNames = _appConfiguration["SoaClient:AssemblyNames"].Split(',');
             Configuration.Modules.SoaClient().Token = _appConfiguration["SoaClient:Token"];
             Configuration.Modules.SoaClient().HealthCheck = _appConfiguration.GetSection("SoaClient:HealthCheck").Get<HealthCheckConfiguration>();
-            Configuration.Modules.SoaClient().ServiceDiscovery = _appConfiguration.GetSection("SoaClient:ServiceDiscovery").Get<ServiceDiscoveryConfiguration>();
+            Configuration.Modules.SoaClient().InServiceDiscovery = _appConfiguration.GetSection("SoaClient:InServiceDiscovery").Get<InServiceDiscoveryConfiguration>();
+            Configuration.Modules.SoaClient().Discovery = _appConfiguration["SoaClient:Discovery"];
+            Configuration.Modules.SoaClient().ConsulServiceDiscovery = _appConfiguration.GetSection("SoaClient:ConsulServiceDiscovery").Get<ConsulServiceDiscoveryConfiguration>();
 
             var assemblies = new List<Assembly>();
             foreach (var assemblyName in Configuration.Modules.SoaClient().AssemblyNames)
@@ -167,57 +171,128 @@ namespace Soa
 
             var clientDiscovery = IocManager.Resolve<IClientServiceDiscovery>();
             var remoteCaller = IocManager.Resolve<IRemoteServiceCaller>();
-            var typeConverter = IocManager.Resolve<ITypeConvertProvider>();
-            StringBuilder sb = new StringBuilder();
 
-            var address = Configuration.Modules.SoaClient().Address;
-            foreach (var addr in address)
+            if (config.Discovery == "Consul")
             {
-                sb.AppendFormat(addr.Code + ",");
-                var service = new SoaServiceRoute
-                {
-                    Address = new List<SoaAddress>
-                        {
-                            addr
-                        },
-                    ServiceDescriptor = new SoaServiceDesc { Id = "Soa.ServiceDiscovery.InServer.GetRoutesDescAsync" }
-                };
                 clientDiscovery.AddRoutesGetter(async () =>
                 {
-                    var result = await remoteCaller.InvokeAsync(service, null, null);
-                    if (result == null || result.HasError)
+
+                    var serverAddress = $"http://{config.ConsulServiceDiscovery.Ip}:{config.ConsulServiceDiscovery.Port}";
+
+                    var consul = new ConsulClient(config =>
+                    {
+                        config.Address = new Uri(serverAddress);
+                    });
+                    var queryResult = await consul.KV.Keys("SoaService");
+                    var keys = queryResult.Response;
+                    if (keys == null)
                     {
                         return null;
                     }
 
-                    var routesDesc =
-                        (List<SoaServiceRouteDesc>)typeConverter.Convert(result.Result,
-                            typeof(List<SoaServiceRouteDesc>));
                     var routes = new List<SoaServiceRoute>();
-                    foreach (var desc in routesDesc)
+                    foreach (var key in keys)
                     {
-                        List<SoaAddress> addresses =
-                            new List<SoaAddress>(desc.AddressDescriptors.ToArray().Count());
-                        foreach (var addDesc in desc.AddressDescriptors)
+                        var data = (await consul.KV.Get(key)).Response?.Value;
+                        if (data == null)
                         {
-                            var addrType = Type.GetType(addDesc.Type);
-                            addresses.Add(serializer.Deserialize(addDesc.Value, addrType) as SoaAddress);
+                            continue;
                         }
 
-                        routes.Add(new SoaServiceRoute()
+                        var descriptors = serializer.Deserialize<byte[], List<SoaServiceRouteDesc>>(data);
+                        if (descriptors != null && descriptors.Any())
                         {
-                            ServiceDescriptor = desc.ServiceDescriptor,
-                            Address = addresses
-                        });
+                            foreach (var descriptor in descriptors)
+                            {
+                                List<SoaAddress> addresses =
+                                    new List<SoaAddress>(descriptor.AddressDescriptors.ToArray().Count());
+                                foreach (var addDesc in descriptor.AddressDescriptors)
+                                {
+                                    var addrType = Type.GetType(addDesc.Type);
+                                    addresses.Add(serializer.Deserialize(addDesc.Value, addrType) as SoaAddress);
+                                }
+
+                                routes.Add(new SoaServiceRoute
+                                {
+                                    Address = addresses,
+                                    ServiceDescriptor = descriptor.ServiceDescriptor
+                                });
+                            }
+                        }
+
                     }
 
                     return routes;
                 });
-            }
-            if (sb.Length > 0)
-            {
+
 
             }
+            else if (config.Discovery == "InServer")
+            {
+                var typeConverter = IocManager.Resolve<ITypeConvertProvider>();
+                StringBuilder sb = new StringBuilder();
+
+                var address = Configuration.Modules.SoaClient().Address;
+                foreach (var addr in address)
+                {
+                    sb.AppendFormat(addr.Code + ",");
+                    var service = new SoaServiceRoute
+                    {
+                        Address = new List<SoaAddress>
+                        {
+                            addr
+                        },
+                        ServiceDescriptor = new SoaServiceDesc { Id = "Soa.ServiceDiscovery.InServer.GetRoutesDescAsync" }
+                    };
+                    clientDiscovery.AddRoutesGetter(async () =>
+                    {
+                        var result = await remoteCaller.InvokeAsync(service, null, null);
+                        if (result == null || result.HasError)
+                        {
+                            return null;
+                        }
+
+                        var routesDesc =
+                            (List<SoaServiceRouteDesc>)typeConverter.Convert(result.Result,
+                                typeof(List<SoaServiceRouteDesc>));
+                        var routes = new List<SoaServiceRoute>();
+                        foreach (var desc in routesDesc)
+                        {
+                            List<SoaAddress> addresses =
+                                new List<SoaAddress>(desc.AddressDescriptors.ToArray().Count());
+                            foreach (var addDesc in desc.AddressDescriptors)
+                            {
+                                var addrType = Type.GetType(addDesc.Type);
+                                addresses.Add(serializer.Deserialize(addDesc.Value, addrType) as SoaAddress);
+                            }
+
+                            routes.Add(new SoaServiceRoute()
+                            {
+                                ServiceDescriptor = desc.ServiceDescriptor,
+                                Address = addresses
+                            });
+                        }
+
+                        return routes;
+                    });
+                }
+                if (sb.Length > 0)
+                {
+
+                }
+            }
+            else
+            {
+                throw new Exception("不合法的Discovery名称");
+            }
+
+
+
+
+
+
+
+
 
             //ServiceProxy
 

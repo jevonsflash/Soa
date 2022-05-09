@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Abp.AspNetCore" Version="7.1.0" />
+    <PackageReference Include="Consul" Version="1.6.10.5" />
     <PackageReference Include="DotNetty.Codecs" Version="0.7.0" />
     <PackageReference Include="Flurl.Http" Version="3.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.3" />

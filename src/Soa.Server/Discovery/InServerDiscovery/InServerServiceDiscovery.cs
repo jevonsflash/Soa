@@ -10,7 +10,7 @@ using Soa.Serializer;
 
 namespace Soa.Server.Discovery
 {
-    public class InServerServiceDiscovery : IServiceDiscovery, ISingletonDependency
+    public class InServerServiceDiscovery : IServiceDiscovery
     {
         private static readonly List<SoaServiceRoute> _routes = new List<SoaServiceRoute>();
 
