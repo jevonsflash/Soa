@@ -37,6 +37,8 @@ namespace Soa.Sample.Web.Startup
                     typeof(SampleApplicationModule).GetAssembly()
                 );
 
+
+
             Configuration.Modules.AbpWebCommon().SendAllExceptionsToClients = true;
 
         }

@@ -38,6 +38,7 @@ using Soa.Serializer;
 using Soa.TypeConverter;
 using Consul;
 using Soa.Configuration;
+using Abp.AspNetCore.Configuration;
 
 namespace Soa
 {
@@ -60,6 +61,12 @@ namespace Soa
                 typeof(SoaClientModule).GetAssembly().GetDirectoryPathOrNull(), env.EnvironmentName, env.IsDevelopment());
 
             IocManager.Register<ISoaClientConfiguration, SoaClientConfiguration>();
+
+            Configuration.Modules.AbpAspNetCore()
+        .CreateControllersForAppServices(
+            typeof(SoaClientModule).GetAssembly()
+        );
+
             Configuration.Modules.SoaClient().Address = _appConfiguration.GetSection("SoaClient:Address").Get<HttpAddress[]>();
             Configuration.Modules.SoaClient().Transport = _appConfiguration["SoaClient:Transport"];
             Configuration.Modules.SoaClient().AssemblyNames = _appConfiguration["SoaClient:AssemblyNames"].Split(',');

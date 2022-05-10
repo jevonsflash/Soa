@@ -6,7 +6,9 @@ namespace Soa.Sample.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return Redirect("/swagger");
+
+            //return View();
         }
 
         public ActionResult About()

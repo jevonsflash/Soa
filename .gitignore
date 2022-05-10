@@ -250,3 +250,4 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/sample/MainHost/Soa.Sample.Web/App_Data

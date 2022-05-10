@@ -27,6 +27,7 @@ using Microsoft.Extensions.Hosting;
 using Soa.ServiceId;
 using Soa.Protocols.Service;
 using Soa.Server.ConsulDiscovery;
+using Soa.Configuration;
 
 namespace Soa.Server
 {

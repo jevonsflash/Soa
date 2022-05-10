@@ -1,4 +1,6 @@
-﻿namespace Soa.Server.Configuration
+﻿using Soa.Configuration;
+
+namespace Soa.Server.Configuration
 {
     public class SoaServerConfiguration : ISoaServerConfiguration
     {
