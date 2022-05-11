@@ -65,6 +65,9 @@ namespace Soa
             Configuration.Modules.AbpAspNetCore()
         .CreateControllersForAppServices(
             typeof(SoaClientModule).GetAssembly()
+
+
+
         );
 
             Configuration.Modules.SoaClient().Address = _appConfiguration.GetSection("SoaClient:Address").Get<HttpAddress[]>();
@@ -95,6 +98,17 @@ namespace Soa
             var thisAssembly = typeof(SoaClientModule).GetAssembly();
 
             IocManager.RegisterAssemblyByConvention(thisAssembly);
+
+            //ServiceProxy
+
+            var serviceProxyGenerator = IocManager.Resolve<IServiceProxyGenerator>();
+            var serviceProxyTypes = serviceProxyGenerator.GenerateProxyTypes(serviceTypes);
+            var serviceProxy = IocManager.Resolve<IServiceProxy>();
+
+            var ass = serviceProxyGenerator.GetGeneratedServiceProxyAssembly();
+
+            Configuration.Modules.AbpAspNetCore()
+            .CreateControllersForAppServices(ass);
 
         }
 
@@ -301,13 +315,7 @@ namespace Soa
 
 
 
-            //ServiceProxy
-
-            var serviceProxyGenerator = IocManager.Resolve<IServiceProxyGenerator>();
-            var serviceProxyTypes = serviceProxyGenerator.GenerateProxy(serviceTypes);
-            var serviceProxy = IocManager.Resolve<IServiceProxy>();
-
-
+  
 
 
             var workerManager = IocManager.Resolve<IBackgroundWorkerManager>();

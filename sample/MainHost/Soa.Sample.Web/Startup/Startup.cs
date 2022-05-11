@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+using Soa.Client;
 
 namespace Soa.Sample.Web.Startup
 {
@@ -53,25 +54,15 @@ namespace Soa.Sample.Web.Startup
             });
 
 
-            //Configure Abp and Dependency Injection
-            return services.AddAbp<SampleWebModule>(options =>
-            {
-                //Configure Log4Net logging
-                options.IocManager.IocContainer.AddFacility<LoggingFacility>(
-                    f => f.UseAbpLog4Net().WithConfig(
-                        _hostingEnvironment.IsDevelopment()
-                            ? "log4net.config"
-                            : "log4net.Production.config"
-                        )
-                );
-            });
+            //Configure Soa
+            return services.AddSoa<SampleWebModule>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
 
 
-            app.UseAbp(); //Initializes ABP framework.
+            app.UseSoa(); //Initializes Soa.
 
             if (env.IsDevelopment())
             {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace Soa.Client.Proxy
 {
@@ -10,7 +11,9 @@ namespace Soa.Client.Proxy
         /// </summary>
         /// <param name="interfaceTypes"></param>
         /// <returns></returns>
-        IEnumerable<Type> GenerateProxy(IEnumerable<Type> interfaceTypes);
+        IEnumerable<Type> GenerateProxyTypes(IEnumerable<Type> interfaceTypes);
+        Assembly GenerateProxy(IEnumerable<Type> interfaceTypes);
+        Assembly GetGeneratedServiceProxyAssembly();
 
         /// <summary>
         ///     get all generated service proxy

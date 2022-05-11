@@ -251,3 +251,4 @@ paket-files/
 .idea/
 *.sln.iml
 /sample/MainHost/Soa.Sample.Web/App_Data
+/Abp*

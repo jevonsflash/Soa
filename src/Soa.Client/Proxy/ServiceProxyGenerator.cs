@@ -16,6 +16,7 @@ namespace Soa.Client.Proxy
     {
         private readonly IServiceIdGenerator _serviceIdGenerator;
         private IEnumerable<Type> _generatedServiceProxyTypes;
+        private Assembly _generatedServiceProxyAssembly;
 
         public ServiceProxyGenerator(IServiceIdGenerator serviceIdGenerator)
         {
@@ -26,7 +27,19 @@ namespace Soa.Client.Proxy
         {
             return _generatedServiceProxyTypes;
         }
-        public IEnumerable<Type> GenerateProxy(IEnumerable<Type> interfaceTypes)
+
+        public Assembly GetGeneratedServiceProxyAssembly()
+        {
+            return _generatedServiceProxyAssembly;
+        }
+        public IEnumerable<Type> GenerateProxyTypes(IEnumerable<Type> interfaceTypes)
+        {
+            var assembly= GenerateProxy(interfaceTypes);
+            _generatedServiceProxyTypes = assembly.GetExportedTypes();
+            return _generatedServiceProxyTypes;
+        }
+
+        public Assembly GenerateProxy(IEnumerable<Type> interfaceTypes)
         {
 #if NET
             var assemblies = AppDomain.CurrentDomain.GetAssemblies().ToList();
@@ -52,8 +65,8 @@ namespace Soa.Client.Proxy
 #else
                 var assembly = AssemblyLoadContext.Default.LoadFromStream(stream);
 #endif
-                _generatedServiceProxyTypes = assembly.GetExportedTypes();
-                return _generatedServiceProxyTypes;
+                _generatedServiceProxyAssembly = assembly;
+                return _generatedServiceProxyAssembly;
 
             }
         }
