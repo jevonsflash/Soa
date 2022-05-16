@@ -1,6 +1,8 @@
 ﻿using System;
+using System.IO;
 using Abp.Dependency;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Hosting;
 using Soa.Server;
 
 namespace Soa.Sample.Service2.Host
@@ -13,9 +15,15 @@ namespace Soa.Sample.Service2.Host
             Console.WriteLine("Service2 Host Started!");
             var ioc = new IocManager();
             builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddSoa<Service2HostModel>();
+            builder.Services.AddSoaServer<Service2HostModel>(new SoaServerOptions()
+            {
+                IsDevelopment = builder.Environment.IsDevelopment(),
+                LoggerProvider = "CONSOLELOGGER",
+                PlugInsPath = Path.Combine(builder.Environment.ContentRootPath, "PlugIns")
+
+            });
             var webapp = builder.Build();
-            webapp.UseSoa();
+            webapp.UseSoaServer();
             webapp.Run();
         }
     }

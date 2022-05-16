@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soa.Client", "src\Soa.Clien
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soa.Server", "src\Soa.Server\Soa.Server.csproj", "{E9CE1CC5-404C-46FB-BFB5-2E11618E8799}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MainHost", "MainHost", "{1320AED9-EF0E-46CE-8217-66B60716E91B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SimpleRpcSample", "SimpleRpcSample", "{1320AED9-EF0E-46CE-8217-66B60716E91B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A1454022-3543-491D-A69B-0CF60CB253AC}"
 EndProject
@@ -49,6 +49,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{07DD
 	ProjectSection(SolutionItems) = preProject
 		dbscript\sampledb.sql = dbscript\sampledb.sql
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GatewaySample", "GatewaySample", "{677EB9F9-3874-4F61-9612-65273A8CD143}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soa.GatewaySample.Application", "sample\MainHost\Soa.GatewaySample.Application\Soa.GatewaySample.Application.csproj", "{B3A5BC8C-B949-4F78-9CC2-66395278268E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soa.GatewaySample.Core", "sample\MainHost\Soa.GatewaySample.Core\Soa.GatewaySample.Core.csproj", "{FE6DA911-4B81-43F9-925B-56CF145D79A5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soa.GatewaySample.EntityFrameworkCore", "sample\MainHost\Soa.GatewaySample.EntityFrameworkCore\Soa.GatewaySample.EntityFrameworkCore.csproj", "{E64BE27E-A01E-4921-8F08-DCD86CFC41E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soa.GatewaySample.Migrator", "sample\MainHost\Soa.GatewaySample.Migrator\Soa.GatewaySample.Migrator.csproj", "{01EA09A7-DBD4-45F1-8C9A-CAA15F2DE00F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soa.GatewaySample.Web.Core", "sample\MainHost\Soa.GatewaySample.Web.Core\Soa.GatewaySample.Web.Core.csproj", "{CBA6BE01-DB63-4AEE-86F2-7BE26D11E450}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soa.GatewaySample.Web.Host", "sample\MainHost\Soa.GatewaySample.Web.Host\Soa.GatewaySample.Web.Host.csproj", "{23CEDECA-2D0E-4E41-BCA2-EC646D1A7B0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -116,6 +130,30 @@ Global
 		{3E49AD5D-B339-4442-84C0-8D856DC9182F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E49AD5D-B339-4442-84C0-8D856DC9182F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E49AD5D-B339-4442-84C0-8D856DC9182F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A5BC8C-B949-4F78-9CC2-66395278268E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A5BC8C-B949-4F78-9CC2-66395278268E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A5BC8C-B949-4F78-9CC2-66395278268E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A5BC8C-B949-4F78-9CC2-66395278268E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE6DA911-4B81-43F9-925B-56CF145D79A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE6DA911-4B81-43F9-925B-56CF145D79A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE6DA911-4B81-43F9-925B-56CF145D79A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE6DA911-4B81-43F9-925B-56CF145D79A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E64BE27E-A01E-4921-8F08-DCD86CFC41E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E64BE27E-A01E-4921-8F08-DCD86CFC41E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E64BE27E-A01E-4921-8F08-DCD86CFC41E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E64BE27E-A01E-4921-8F08-DCD86CFC41E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01EA09A7-DBD4-45F1-8C9A-CAA15F2DE00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01EA09A7-DBD4-45F1-8C9A-CAA15F2DE00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01EA09A7-DBD4-45F1-8C9A-CAA15F2DE00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01EA09A7-DBD4-45F1-8C9A-CAA15F2DE00F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBA6BE01-DB63-4AEE-86F2-7BE26D11E450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBA6BE01-DB63-4AEE-86F2-7BE26D11E450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBA6BE01-DB63-4AEE-86F2-7BE26D11E450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBA6BE01-DB63-4AEE-86F2-7BE26D11E450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23CEDECA-2D0E-4E41-BCA2-EC646D1A7B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CEDECA-2D0E-4E41-BCA2-EC646D1A7B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CEDECA-2D0E-4E41-BCA2-EC646D1A7B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CEDECA-2D0E-4E41-BCA2-EC646D1A7B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -140,6 +178,13 @@ Global
 		{B8EA0D36-790F-4956-9681-415C061E0CEA} = {A1454022-3543-491D-A69B-0CF60CB253AC}
 		{3E49AD5D-B339-4442-84C0-8D856DC9182F} = {A1454022-3543-491D-A69B-0CF60CB253AC}
 		{07DDDAE3-217E-4482-9E06-E98E5DF90FAF} = {0276303C-44F9-4722-AB74-8E7B070D54E5}
+		{677EB9F9-3874-4F61-9612-65273A8CD143} = {0276303C-44F9-4722-AB74-8E7B070D54E5}
+		{B3A5BC8C-B949-4F78-9CC2-66395278268E} = {677EB9F9-3874-4F61-9612-65273A8CD143}
+		{FE6DA911-4B81-43F9-925B-56CF145D79A5} = {677EB9F9-3874-4F61-9612-65273A8CD143}
+		{E64BE27E-A01E-4921-8F08-DCD86CFC41E0} = {677EB9F9-3874-4F61-9612-65273A8CD143}
+		{01EA09A7-DBD4-45F1-8C9A-CAA15F2DE00F} = {677EB9F9-3874-4F61-9612-65273A8CD143}
+		{CBA6BE01-DB63-4AEE-86F2-7BE26D11E450} = {677EB9F9-3874-4F61-9612-65273A8CD143}
+		{23CEDECA-2D0E-4E41-BCA2-EC646D1A7B0C} = {677EB9F9-3874-4F61-9612-65273A8CD143}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B516B1E8-1CEC-4BCC-BA92-93CB32845E37}

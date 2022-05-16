@@ -13,19 +13,20 @@ using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 using Soa.Client;
+using System.IO;
 
 namespace Soa.Sample.Web.Startup
 {
     public class Startup
     {
-    
+
         private readonly IWebHostEnvironment _hostingEnvironment;
 
         public Startup(IWebHostEnvironment env)
         {
             _hostingEnvironment = env;
         }
-        
+
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             //Configure DbContext
@@ -45,7 +46,7 @@ namespace Soa.Sample.Web.Startup
             {
                 options.SwaggerDoc("soa", new OpenApiInfo
                 {
-                    Title = "Soa API",                
+                    Title = "Soa API",
                 });
                 options.DocInclusionPredicate((docName, description) => true);
 
@@ -55,14 +56,22 @@ namespace Soa.Sample.Web.Startup
 
 
             //Configure Soa
-            return services.AddSoa<SampleWebModule>();
+            var result = services.AddSoaClient<SampleWebModule>(new SoaClientOptions()
+            {
+                IsDevelopment = _hostingEnvironment.IsDevelopment(),
+                LoggerProvider = "CONSOLELOGGER",
+                PlugInsPath = Path.Combine(_hostingEnvironment.WebRootPath, "PlugIns")
+
+            });
+
+            return result;
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
 
 
-            app.UseSoa(); //Initializes Soa.
+            app.UseSoaClient(); //Initializes Soa.
 
             if (env.IsDevelopment())
             {

@@ -15,6 +15,9 @@ using Soa.Protocols.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Soa.Helpers;
+using System.Reflection;
+using Soa.Protocols.Attributes;
 
 namespace Soa.Client
 {
@@ -42,12 +45,18 @@ namespace Soa.Client
 
                 if (typeof(ISoaService).IsAssignableFrom(type))
                 {
-                    controller.ControllerName = controller.ControllerName;
-                    configuration?.ControllerModelConfigurer(controller);
+                    var remoteServiceAtt = ReflectionHelper.GetSingleAttributeOrDefault<SoaServiceRouteAttribute>(type.GetTypeInfo());
+                    if (remoteServiceAtt != null && remoteServiceAtt.IsExposureToGateway)
+                    {
+                        controller.ControllerName = controller.ControllerName;
+                        configuration?.ControllerModelConfigurer(controller);
 
-                    ConfigureArea(controller, configuration);
-                    ConfigureRemoteService(controller, configuration);
-                }           
+                        ConfigureArea(controller, configuration);
+                        ConfigureRemoteService(controller, configuration);
+                    }
+
+
+                }
             }
         }
 
@@ -137,10 +146,10 @@ namespace Soa.Client
 
             if (controller.ApiExplorer.IsVisible == null)
             {
-                    controller.ApiExplorer.IsVisible = true;
+                controller.ApiExplorer.IsVisible = true;
             }
 
-    
+
         }
 
 

@@ -104,12 +104,12 @@ namespace Soa.Client.Proxy
                                 SyntaxFactory.AttributeArgument(
                                     SyntaxFactory.LiteralExpression(
                                         SyntaxKind.StringLiteralExpression,
-                                        SyntaxFactory.Literal(".NETFramework,Version=v4.5"))),
+                                        SyntaxFactory.Literal("net6.0"))),
                                 SyntaxFactory.Token(SyntaxKind.CommaToken),
                                 SyntaxFactory.AttributeArgument(
                                     SyntaxFactory.LiteralExpression(
                                         SyntaxKind.StringLiteralExpression,
-                                        SyntaxFactory.Literal(".NET Framework 4.5")))
+                                        SyntaxFactory.Literal("net6.0")))
                                 .WithNameEquals(
                                     SyntaxFactory.NameEquals(
                                         SyntaxFactory.IdentifierName("FrameworkDisplayName")))})))))
@@ -233,7 +233,7 @@ namespace Soa.Client.Proxy
             public string FileVersion { get; set; }
             public bool ComVisible { get; set; }
 
-            public static AssemblyInfo Create(string name, string copyright = "Copyright ©  Soa", string version = "0.0.0.1")
+            public static AssemblyInfo Create(string name, string copyright = "Copyright © MatoApp", string version = "0.0.0.1")
             {
                 return new AssemblyInfo
                 {

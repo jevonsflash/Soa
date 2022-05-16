@@ -8,11 +8,14 @@ namespace Soa.Protocols.Attributes
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class)]
     public class SoaServiceRouteAttribute : Attribute
     {
-        public SoaServiceRouteAttribute(string routeTemplate)
+        public SoaServiceRouteAttribute(string routeTemplate, bool isExposureToGateway = true)
         {
             RouteTemplate = routeTemplate;
+            IsExposureToGateway = isExposureToGateway;
         }
 
         public string RouteTemplate { get; }
+
+        public bool IsExposureToGateway { get; set; }
     }
 }

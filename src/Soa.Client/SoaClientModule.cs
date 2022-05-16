@@ -39,6 +39,7 @@ using Soa.TypeConverter;
 using Consul;
 using Soa.Configuration;
 using Abp.AspNetCore.Configuration;
+using Castle.MicroKernel.Registration;
 
 namespace Soa
 {
@@ -103,7 +104,24 @@ namespace Soa
 
             var serviceProxyGenerator = IocManager.Resolve<IServiceProxyGenerator>();
             var serviceProxyTypes = serviceProxyGenerator.GenerateProxyTypes(serviceTypes);
-            var serviceProxy = IocManager.Resolve<IServiceProxy>();
+
+            var remoteServiceInvoker = IocManager.Resolve<IRemoteServiceCaller>();
+
+            foreach (var serviceProxyType in serviceProxyTypes)
+            {
+                if (!IocManager.IsRegistered(serviceProxyType))
+                {
+
+                    var instance = serviceProxyType.GetTypeInfo().GetConstructors().First().Invoke(new object[]
+                        {
+                            remoteServiceInvoker
+                        });
+
+                    IocManager.IocContainer.Register(
+                        Component.For(serviceProxyType).Instance(instance)
+                    );
+                }
+            }
 
             var ass = serviceProxyGenerator.GetGeneratedServiceProxyAssembly();
 
@@ -315,7 +333,7 @@ namespace Soa
 
 
 
-  
+
 
 
             var workerManager = IocManager.Resolve<IBackgroundWorkerManager>();

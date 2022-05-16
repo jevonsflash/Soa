@@ -82,7 +82,7 @@ namespace Soa.Client.Proxy
             };
 
             members.AddRange(GenerateMethodDeclarations(interfaceType.GetMethods()));
-            return SyntaxFactory.CompilationUnit()
+            var result= SyntaxFactory.CompilationUnit()
                   .WithUsings(GetUsings())
                   .WithMembers(
                       SyntaxFactory.SingletonList<MemberDeclarationSyntax>(
@@ -107,6 +107,9 @@ namespace Soa.Client.Proxy
                                           })))
                               .WithMembers(SyntaxFactory.List(members))))))
                   .NormalizeWhitespace().SyntaxTree;
+            Console.Write(result.GetText());
+            return result;
+
         }
         private static SyntaxList<UsingDirectiveSyntax> GetUsings()
         {
