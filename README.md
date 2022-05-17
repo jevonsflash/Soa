@@ -35,21 +35,94 @@ grissomlau 的项目 [jimu](https://github.com/grissomlau/jimu)
 * 基于Log4Net的日志(Abp实现)
 * 基于EF，并实现模型的Repository仓储模式(Abp实现)
 
+## 更新内容：
+
+
+Date | Version | Content
+:----------: | :-----------: | :-----------
+V0.9.0         | 2022-5-17     | 初始版本
+
+
 ## 快速开始
+### 网关（客户端） GatewaySample
 
+* 添加对Soa库的引用
+* 添加对Soa.Client库的引用
 
-Program.cs
+Startup.cs 文件
+
+1. 删除AddAbp
+```
+// services.AddAbp();
+```
+2. 添加AddSoaClient
+```
+services.AddSoaClient<GatewaySampleWebHostModule>(new SoaClientOptions()
+{
+    IsDevelopment = _hostingEnvironment.IsDevelopment(),
+    LoggerProvider = _appConfiguration["App:UseLogger"].ToUpper(),
+    PlugInsPath = Path.Combine(_hostingEnvironment.WebRootPath, "PlugIns")
+},true);
+```
+3. 删除UseAbp
+```
+//app.UseAbp();
+```
+4. 添加UseSoaClient
+```
+app.UseSoaClient(options => { options.UseAbpRequestLocalization = false; }); // Initializes Soa framework.
+```
+
+GatewaySampleWebHostModule.cs 文件
+1. 添加SoaClientModule模块依赖
+```
+[DependsOn(typeof(SoaClientModule))]
+
+public class GatewaySampleWebHostModule: AbpModule
+{
+    //Your code
+}
+```
+
+* 配置 appsettings.json 文件
+* 配置 Hangfire
+
+### 微服务抽象层 IService1
+
+IService1Manager.cs 文件
+
+1. 构建接口IService1Manager并继承于ISoaService
+2. 添加Soa标签和Abp标签
+```
+[AbpAuthorize(PermissionNames.Pages_Users)]     //Abp标签
+[SoaServiceRoute("soa_api/service1")]           //SoaServiceRoute标签 
+public interface IService1Manager : ISoaService
+{
+    //定义接口    
+    [SoaService(CreatedBy = "linxiao", Comment = "get type by main id")]
+    public string GetSomething(long id);
+
+}
+```
+
+* 将微服务抽象层引用添加至网关（客户端） GatewaySample
+
+### 微服务（服务端） Service1
+
+* 添加对微服务抽象层的引用
+
+Program.cs 文件
 
 ```
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddSoa<YourServiceHostModel>();
+builder.Services.AddSoa<Service1HostModel>();
 var webapp = builder.Build();
-webapp.UseSoa();
+webapp.UseSoaServer();
 webapp.Run();
 ```
 
-YourServiceHostModel.cs:
-
+Service1HostModel.cs 文件
+1. 添加SoaServerModule模块依赖
 ```
 [DependsOn(typeof(SoaServerModule))]
 public class Service1HostModel : AbpModule
@@ -57,13 +130,51 @@ public class Service1HostModel : AbpModule
     //Your code
 }
 ```
+Service1Manager.cs 文件
+1. 构建类Service1Manager
+2. 继承IService1Manager并实现其成员
+```
+public class Service1Manager : DomainService , IService1Manager
+{
+    //实现业务
+    public string GetSomething(long id)
+    {
+        return "hello_world";
+    }
+}
+```
+* 配置 appsettings.json 文件
+
+
 完整示例请参考[Sample](https://github.com/MatoApps/Soa/tree/master/sample)
 ,配置说明式请阅读系列博客
 
-系列博客
+## 系列博客
 
 1. [使用Soa库+Abp搭建微服务项目框架（一）：Abp与DDD相关知识回顾](https://blog.csdn.net/jevonsflash/article/details/120830747)
 2. [使用Soa库+Abp搭建微服务项目框架（二）：面向服务体系的介绍](https://blog.csdn.net/jevonsflash/article/details/120841700)
 3. [使用Soa库+Abp搭建微服务项目框架（三）：项目改造](https://blog.csdn.net/jevonsflash/article/details/120839802)
 4. [使用Soa库+Abp搭建微服务项目框架（四）：动态代理和RPC](https://blog.csdn.net/jevonsflash/article/details/120850141)
 5. [使用Soa库+Abp搭建微服务项目框架（五）：服务发现和健康监测](https://blog.csdn.net/jevonsflash/article/details/124668465)
+
+## 工具
+
+[Roslyn Syntax Tool](https://github.com/MatoApps/RoslynSyntaxTool)
+
+* 此工具能将C#代码，转换成使用语法工厂构造器（SyntaxFactory）生成等效语法树代码
+
+
+## 已知问题
+
+
+## 作者信息
+
+作者：林小
+
+邮箱：jevonsflash@qq.com
+
+
+
+## License
+
+The MIT License (MIT)

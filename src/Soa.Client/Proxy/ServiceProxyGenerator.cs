@@ -156,6 +156,7 @@ namespace Soa.Client.Proxy
                     SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(IRemoteServiceCaller).Namespace)),
                     //SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(ISerializer).Namespace)),
                     SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(ServiceProxyBase).Namespace)),
+                    SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(AbpAuthorizeAttribute).Namespace)),
                     SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(SoaServiceAttribute).Namespace))
                 });
         }
@@ -317,7 +318,7 @@ namespace Soa.Client.Proxy
                                 )));
             }
 
-            var abpAuthorizeAttribute = ReflectionHelper.GetSingleAttributeOrDefault<AbpAuthorizeAttribute>(method);
+            var abpAuthorizeAttribute = ReflectionHelper.GetSingleAttributeOrDefault<SoaAuthorizeAttribute>(method);
             if (abpAuthorizeAttribute!=null)
             {
 

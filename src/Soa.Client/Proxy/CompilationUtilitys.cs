@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Abp.Authorization;
 using Abp.Logging;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
@@ -33,7 +34,8 @@ namespace Soa.Client.Proxy
                 MetadataReference.CreateFromFile(typeof(Task).GetTypeInfo().Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(SoaServiceDesc).GetTypeInfo().Assembly.Location),
                 MetadataReference.CreateFromFile(typeof(IRemoteServiceCaller).GetTypeInfo().Assembly.Location),
-                MetadataReference.CreateFromFile(typeof(ServiceProxyGenerator).GetTypeInfo().Assembly.Location)
+                MetadataReference.CreateFromFile(typeof(ServiceProxyGenerator).GetTypeInfo().Assembly.Location),
+                MetadataReference.CreateFromFile(typeof(AbpAuthorizeAttribute).GetTypeInfo().Assembly.Location)
             }.Concat(references).Distinct();
             return Compile(AssemblyInfo.Create("Soa.Proxy.ClientProxy"), trees, references);
         }
