@@ -29,6 +29,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Soa.Client\Soa.Client.csproj" />
     <ProjectReference Include="..\Soa.GatewaySample.Web.Core\Soa.GatewaySample.Web.Core.csproj" />
   </ItemGroup>
   <ItemGroup>

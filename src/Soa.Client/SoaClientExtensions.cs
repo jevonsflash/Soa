@@ -26,7 +26,7 @@ namespace Soa.Client
 
         }
 
-        public static IServiceProvider AddSoaClient<TStartupModule>(this IServiceCollection services, SoaClientOptions options)
+        public static IServiceProvider AddSoaClient<TStartupModule>(this IServiceCollection services, SoaClientOptions options, bool isWithoutCreatingServiceProvider = false)
    where TStartupModule : AbpModule
         {
             var currentUseLogger = options?.LoggerProvider;
@@ -38,7 +38,7 @@ namespace Soa.Client
             {
                 mvcOptions.Conventions.Add(new SoaServiceConvention(services));
             });
-            var result = services.AddAbp<TStartupModule>(options =>
+            Action<AbpBootstrapperOptions> optionsAction = options =>
             {
                 options.IocManager.IocContainer.AddFacility<LoggingFacility>(
                     f =>
@@ -60,7 +60,18 @@ namespace Soa.Client
 
                     options.PlugInSources.AddFolder(plugInsPath, SearchOption.AllDirectories);
                 }
-            });
+            };
+            IServiceProvider result = null;
+            if (!isWithoutCreatingServiceProvider)
+            {
+                result = services.AddAbp<TStartupModule>(optionsAction);
+            }
+            else
+            {
+                services.AddAbpWithoutCreatingServiceProvider<TStartupModule>(optionsAction);
+
+            }
+
 
             //Add feature providers
 

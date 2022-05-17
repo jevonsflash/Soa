@@ -9,9 +9,13 @@ namespace Soa.Protocols.Attributes
     [AttributeUsage(AttributeTargets.Method)]
     public class SoaServiceAttribute : SoaServiceDescAttribute
     {
-        public SoaServiceAttribute()
+
+
+
+        public SoaServiceAttribute(bool isExposureToGateway = true)
         {
             IsWaitExecution = true;
+            IsExposureToGateway=isExposureToGateway;
         }
 
         /// <summary>
@@ -29,6 +33,10 @@ namespace Soa.Protocols.Attributes
         /// </summary>
         public bool IsWaitExecution { get; set; }
 
+        /// <summary>
+        ///    exposure api to the Gateway
+        /// </summary>
+        public bool IsExposureToGateway { get; set; }
         /// <summary>
         ///     creater for this service
         /// </summary>

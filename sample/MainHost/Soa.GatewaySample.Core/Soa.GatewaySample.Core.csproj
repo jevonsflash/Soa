@@ -18,5 +18,9 @@
     <PackageReference Include="Abp.AutoMapper" Version="7.1.0" />
     <PackageReference Include="Abp.ZeroCore.EntityFrameworkCore" Version="7.1.0" />
     <PackageReference Include="Castle.Windsor.MsDependencyInjection" Version="3.4.0" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.8.0-beta4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\Soa\Soa.csproj" />
   </ItemGroup>
 </Project>

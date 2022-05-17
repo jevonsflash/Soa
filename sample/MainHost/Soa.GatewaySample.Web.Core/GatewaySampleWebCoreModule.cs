@@ -22,6 +22,7 @@ namespace Soa.GatewaySample
          typeof(AbpAspNetCoreModule)
         ,typeof(AbpAspNetCoreSignalRModule)
      )]
+
     public class GatewaySampleWebCoreModule : AbpModule
     {
         private readonly IWebHostEnvironment _env;

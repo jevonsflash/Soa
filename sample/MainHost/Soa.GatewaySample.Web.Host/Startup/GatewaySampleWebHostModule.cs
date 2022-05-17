@@ -8,6 +8,8 @@ namespace Soa.GatewaySample.Web.Host.Startup
 {
     [DependsOn(
        typeof(GatewaySampleWebCoreModule))]
+    [DependsOn(typeof(SoaClientModule))]
+
     public class GatewaySampleWebHostModule: AbpModule
     {
         private readonly IWebHostEnvironment _env;

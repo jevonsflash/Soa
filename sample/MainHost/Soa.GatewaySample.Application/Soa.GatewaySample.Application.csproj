@@ -12,6 +12,8 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Services.Abstract\Soa.Sample.IService1\Soa.Sample.IService1.csproj" />
+    <ProjectReference Include="..\..\Services.Abstract\Soa.Sample.IService2\Soa.Sample.IService2.csproj" />
     <ProjectReference Include="..\Soa.GatewaySample.Core\Soa.GatewaySample.Core.csproj" />
   </ItemGroup>
 </Project>

@@ -20,6 +20,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Serialization;
 using System.IO;
+using Soa.Client;
 
 namespace Soa.GatewaySample.Web.Host.Startup
 {
@@ -77,21 +78,37 @@ namespace Soa.GatewaySample.Web.Host.Startup
             // Swagger - Enable this line and the related lines in Configure method to enable swagger UI
             ConfigureSwagger(services);
 
+            //删除AddAbp
+
             // Configure Abp and Dependency Injection
-            services.AddAbpWithoutCreatingServiceProvider<GatewaySampleWebHostModule>(
-                // Configure Log4Net logging
-                options => options.IocManager.IocContainer.AddFacility<LoggingFacility>(
-                    f => f.UseAbpLog4Net().WithConfig(_hostingEnvironment.IsDevelopment()
-                        ? "log4net.config"
-                        : "log4net.Production.config"
-                    )
-                )
-            );
+            //services.AddAbpWithoutCreatingServiceProvider<GatewaySampleWebHostModule>(
+            //    // Configure Log4Net logging
+            //    options => options.IocManager.IocContainer.AddFacility<LoggingFacility>(
+            //        f => f.UseAbpLog4Net().WithConfig(_hostingEnvironment.IsDevelopment()
+            //            ? "log4net.config"
+            //            : "log4net.Production.config"
+            //        )
+            //    )
+            //);
+
+            //添加AddSoaClient
+            services.AddSoaClient<GatewaySampleWebHostModule>(new SoaClientOptions()
+            {
+                IsDevelopment = _hostingEnvironment.IsDevelopment(),
+                LoggerProvider = _appConfiguration["App:UseLogger"].ToUpper(),
+                PlugInsPath = Path.Combine(_hostingEnvironment.WebRootPath, "PlugIns")
+            },true);
+            
+
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
-            app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
+            //删除UseAbp
+            //app.UseAbp(options => { options.UseAbpRequestLocalization = false; }); // Initializes ABP framework.
+
+            //添加UseSoaClient
+            app.UseSoaClient(options => { options.UseAbpRequestLocalization = false; }); // Initializes Soa framework.
 
             app.UseCors(_defaultCorsPolicyName); // Enable CORS!
 

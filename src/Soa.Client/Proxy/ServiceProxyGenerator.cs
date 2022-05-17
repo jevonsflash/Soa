@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using Abp.Authorization;
 using Abp.Dependency;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Soa.Client.RemoteCaller;
+using Soa.Helpers;
+using Soa.Protocols.Attributes;
 using Soa.ServiceId;
 
 namespace Soa.Client.Proxy
@@ -34,7 +37,7 @@ namespace Soa.Client.Proxy
         }
         public IEnumerable<Type> GenerateProxyTypes(IEnumerable<Type> interfaceTypes)
         {
-            var assembly= GenerateProxy(interfaceTypes);
+            var assembly = GenerateProxy(interfaceTypes);
             _generatedServiceProxyTypes = assembly.GetExportedTypes();
             return _generatedServiceProxyTypes;
         }
@@ -82,31 +85,62 @@ namespace Soa.Client.Proxy
             };
 
             members.AddRange(GenerateMethodDeclarations(interfaceType.GetMethods()));
-            var result= SyntaxFactory.CompilationUnit()
-                  .WithUsings(GetUsings())
-                  .WithMembers(
-                      SyntaxFactory.SingletonList<MemberDeclarationSyntax>(
-                          SyntaxFactory.NamespaceDeclaration(
-                              SyntaxFactory.QualifiedName(
-                                  SyntaxFactory.QualifiedName(
-                                      SyntaxFactory.IdentifierName("Soa"),
-                                      SyntaxFactory.IdentifierName("Proxy")),
-                                  SyntaxFactory.IdentifierName("ClientProxy")))
-                  .WithMembers(
-                      SyntaxFactory.SingletonList<MemberDeclarationSyntax>(
-                          SyntaxFactory.ClassDeclaration(className)
-                              .WithModifiers(SyntaxFactory.TokenList(SyntaxFactory.Token(SyntaxKind.PublicKeyword)))
-                              .WithBaseList(
-                                  SyntaxFactory.BaseList(
-                                      SyntaxFactory.SeparatedList<BaseTypeSyntax>(
-                                          new SyntaxNodeOrToken[]
-                                          {
+
+            ClassDeclarationSyntax declaration = SyntaxFactory.ClassDeclaration(className);
+
+
+            var soaServiceRouteAttribute = ReflectionHelper.GetSingleAttributeOrDefault<SoaServiceRouteAttribute>(interfaceType);
+            if (soaServiceRouteAttribute!=null)
+            {
+                var isExposureToGateway = soaServiceRouteAttribute.IsExposureToGateway;
+                declaration=declaration.WithAttributeLists(
+                    SyntaxFactory.SingletonList<AttributeListSyntax>(
+                        SyntaxFactory.AttributeList(
+                            SyntaxFactory.SingletonSeparatedList<AttributeSyntax>(
+                                SyntaxFactory.Attribute(
+                                    SyntaxFactory.IdentifierName("SoaServiceRoute"))
+                                .WithArgumentList(
+                                    SyntaxFactory.AttributeArgumentList(
+                                        SyntaxFactory.SingletonSeparatedList<AttributeArgumentSyntax>(
+                                            SyntaxFactory.AttributeArgument(
+                                                SyntaxFactory.LiteralExpression(
+                                                    isExposureToGateway ?
+                                                    SyntaxKind.TrueLiteralExpression :
+                                                    SyntaxKind.FalseLiteralExpression
+                                                    )))))
+                                ))));
+
+            }
+            declaration=declaration.WithModifiers(SyntaxFactory.TokenList(SyntaxFactory.Token(SyntaxKind.PublicKeyword)))
+                          .WithBaseList(
+                              SyntaxFactory.BaseList(
+                                  SyntaxFactory.SeparatedList<BaseTypeSyntax>(
+                                      new SyntaxNodeOrToken[]
+                                      {
                                             SyntaxFactory.SimpleBaseType(SyntaxFactory.IdentifierName("ServiceProxyBase")),
                                             SyntaxFactory.Token(SyntaxKind.CommaToken),
                                             SyntaxFactory.SimpleBaseType(GetQualifiedNameSyntax(interfaceType))
-                                          })))
-                              .WithMembers(SyntaxFactory.List(members))))))
-                  .NormalizeWhitespace().SyntaxTree;
+                                      })))
+                          .WithMembers(SyntaxFactory.List(members));
+
+            var result = SyntaxFactory.CompilationUnit()
+              .WithUsings(GetUsings())
+              .WithMembers(
+                  SyntaxFactory.SingletonList<MemberDeclarationSyntax>(
+                      SyntaxFactory.NamespaceDeclaration(
+                          SyntaxFactory.QualifiedName(
+                              SyntaxFactory.QualifiedName(
+                                  SyntaxFactory.IdentifierName("Soa"),
+                                  SyntaxFactory.IdentifierName("Proxy")),
+                              SyntaxFactory.IdentifierName("ClientProxy")))
+              .WithMembers(
+                  SyntaxFactory.SingletonList<MemberDeclarationSyntax>(
+                      declaration
+                      ))))
+              .NormalizeWhitespace().SyntaxTree;
+
+
+
             Console.Write(result.GetText());
             return result;
 
@@ -121,7 +155,8 @@ namespace Soa.Client.Proxy
                     SyntaxFactory.UsingDirective(GetQualifiedNameSyntax("System.Collections.Generic")),
                     SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(IRemoteServiceCaller).Namespace)),
                     //SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(ISerializer).Namespace)),
-                    SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(ServiceProxyBase).Namespace))
+                    SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(ServiceProxyBase).Namespace)),
+                    SyntaxFactory.UsingDirective(GetQualifiedNameSyntax(typeof(SoaServiceAttribute).Namespace))
                 });
         }
 
@@ -210,6 +245,7 @@ namespace Soa.Client.Proxy
 
             var parameterList = new List<SyntaxNodeOrToken>();
             var parameterDeclarationList = new List<SyntaxNodeOrToken>();
+            var attributeListSyntaxList = new List<AttributeListSyntax>();
 
             foreach (var parameter in method.GetParameters())
             {
@@ -257,6 +293,80 @@ namespace Soa.Client.Proxy
                    returnDeclaration,
                    SyntaxFactory.Identifier(method.Name));
             }
+
+
+            var soaServiceAttribute = ReflectionHelper.GetSingleAttributeOrDefault<SoaServiceAttribute>(method);
+            if (soaServiceAttribute!=null)
+            {
+                var isExposureToGateway = soaServiceAttribute.IsExposureToGateway;
+
+                attributeListSyntaxList.Add(SyntaxFactory.AttributeList(
+                            SyntaxFactory.SingletonSeparatedList<AttributeSyntax>(
+                                SyntaxFactory.Attribute(
+                                    SyntaxFactory.IdentifierName("SoaService"))
+                                .WithArgumentList(
+                                    SyntaxFactory.AttributeArgumentList(
+                                        SyntaxFactory.SingletonSeparatedList<AttributeArgumentSyntax>(
+                                            SyntaxFactory.AttributeArgument(
+                                                SyntaxFactory.LiteralExpression(
+                                                    isExposureToGateway ?
+                                                    SyntaxKind.TrueLiteralExpression :
+                                                    SyntaxKind.FalseLiteralExpression
+                                                    )))))
+
+                                )));
+            }
+
+            var abpAuthorizeAttribute = ReflectionHelper.GetSingleAttributeOrDefault<AbpAuthorizeAttribute>(method);
+            if (abpAuthorizeAttribute!=null)
+            {
+
+                var syntaxNodeOrTokens = new List<SyntaxNodeOrToken>();
+
+
+                foreach (var permission in abpAuthorizeAttribute.Permissions)
+                {
+                    syntaxNodeOrTokens.Add(
+                        SyntaxFactory.AttributeArgument(
+                            SyntaxFactory.LiteralExpression(
+                                                    SyntaxKind.StringLiteralExpression,
+                                                    SyntaxFactory.Literal(permission))));
+                    syntaxNodeOrTokens.Add(SyntaxFactory.Token(SyntaxKind.CommaToken));
+
+                }
+
+                if (syntaxNodeOrTokens.Any())
+                {
+                    syntaxNodeOrTokens.RemoveAt(syntaxNodeOrTokens.Count - 1);
+                }
+
+
+
+
+                attributeListSyntaxList.Add(
+               SyntaxFactory.AttributeList(
+                            SyntaxFactory.SingletonSeparatedList<AttributeSyntax>(
+                                SyntaxFactory.Attribute(
+                                    SyntaxFactory.IdentifierName("AbpAuthorize"))
+                                .WithArgumentList(
+                                    SyntaxFactory.AttributeArgumentList(
+                                        SyntaxFactory.SeparatedList<AttributeArgumentSyntax>(
+
+                                            syntaxNodeOrTokens
+
+
+                                            ))))));
+
+
+
+            }
+
+            declaration = declaration.WithAttributeLists(
+SyntaxFactory.List<AttributeListSyntax>(
+    attributeListSyntaxList
+
+    ));
+
 
             if (method.ReturnType.Namespace == typeof(Task).Namespace)
             {
