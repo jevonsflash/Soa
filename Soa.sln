@@ -47,6 +47,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Soa.Sample.Service2.Host", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{07DDDAE3-217E-4482-9E06-E98E5DF90FAF}"
 	ProjectSection(SolutionItems) = preProject
+		dbscript\authorized_service_db.sql = dbscript\authorized_service_db.sql
+		dbscript\gateway_sampledb.sql = dbscript\gateway_sampledb.sql
 		dbscript\sampledb.sql = dbscript\sampledb.sql
 	EndProjectSection
 EndProject
