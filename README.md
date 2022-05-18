@@ -18,6 +18,7 @@ grissomlau 的项目 [jimu](https://github.com/grissomlau/jimu)
 * 支持自动路由发现注册与微服务健康监测
 * 支持模块以及模块的依赖关系
 * 支持简单对象(POCO)作为参数或返回类型
+* 支持登录与鉴权
 * 支持多语言/本地化
 
 ## 内容：
@@ -33,6 +34,7 @@ grissomlau 的项目 [jimu](https://github.com/grissomlau/jimu)
 * 基于Hangfire的计划任务
 * 基于Castle Windsor的Ioc(Abp实现)
 * 基于Log4Net的日志(Abp实现)
+* 基于AbpZero的用户系统
 * 基于EF，并实现模型的Repository仓储模式(Abp实现)
 
 ## 更新内容：
@@ -168,6 +170,8 @@ public class Service1Manager : DomainService , IService1Manager
 
 
 完整示例请参考[Sample](https://github.com/MatoApps/Soa/tree/master/sample)
+
+
 ,配置说明式请阅读系列博客
 
 ## 系列博客
