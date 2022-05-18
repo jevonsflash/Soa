@@ -13,6 +13,9 @@ using Soa.GatewaySample.Authentication.JwtBearer;
 using Soa.GatewaySample.Configuration;
 using Soa.GatewaySample.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
+using Abp.Configuration.Startup;
+using Soa.Sample.IAuthorizedService.Authorization;
+using System.Reflection;
 
 namespace Soa.GatewaySample
 {
@@ -47,6 +50,7 @@ namespace Soa.GatewaySample
                  .CreateControllersForAppServices(
                      typeof(GatewaySampleApplicationModule).GetAssembly()
                  );
+            Configuration.Modules.AbpWebCommon().SendAllExceptionsToClients = true;
 
             ConfigureTokenAuth();
         }

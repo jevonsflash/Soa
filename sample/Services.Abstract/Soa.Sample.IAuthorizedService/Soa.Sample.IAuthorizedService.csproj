@@ -5,6 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Localization\SourceFiles\AuthorizedService-zh-Hans.xml" />
+    <None Remove="Localization\SourceFiles\AuthorizedService.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Localization\SourceFiles\AuthorizedService-zh-Hans.xml" />
+    <EmbeddedResource Include="Localization\SourceFiles\AuthorizedService.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\..\src\Soa\Soa.csproj" />
   </ItemGroup>
 

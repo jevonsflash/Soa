@@ -18,6 +18,7 @@ using Soa.GatewaySample.Localization;
 using Soa.GatewaySample.MultiTenancy;
 using Soa.GatewaySample.Timing;
 using Soa.Hangfire;
+using Soa.Sample.IAuthorizedService.Localization;
 
 namespace Soa.GatewaySample
 {
@@ -35,6 +36,7 @@ namespace Soa.GatewaySample
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
 
             GatewaySampleLocalizationConfigurer.Configure(Configuration.Localization);
+            AuthorizedServiceLocalizationConfigurer.Configure(Configuration.Localization);
 
             // Enable this line to create a multi-tenant application.
             Configuration.MultiTenancy.IsEnabled = GatewaySampleConsts.MultiTenancyEnabled;

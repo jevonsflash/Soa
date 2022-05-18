@@ -2,6 +2,8 @@
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 using Soa.GatewaySample.Authorization;
+using Soa.Sample.IAuthorizedService.Authorization;
+using System.Reflection;
 
 namespace Soa.GatewaySample
 {
@@ -13,6 +15,8 @@ namespace Soa.GatewaySample
         public override void PreInitialize()
         {
             Configuration.Authorization.Providers.Add<GatewaySampleAuthorizationProvider>();
+            Configuration.Authorization.Providers.Add<AuthorizedServiceAuthorizationProvider>();
+
         }
 
         public override void Initialize()
@@ -21,10 +25,22 @@ namespace Soa.GatewaySample
 
             IocManager.RegisterAssemblyByConvention(thisAssembly);
 
+            var ass = Assembly.Load("Soa.Sample.IAuthorizedService");
+            IocManager.RegisterAssemblyByConvention(ass);
+
             Configuration.Modules.AbpAutoMapper().Configurators.Add(
                 // Scan the assembly for classes which inherit from AutoMapper.Profile
                 cfg => cfg.AddMaps(thisAssembly)
             );
+        }
+
+        public override Assembly[] GetAdditionalAssemblies()
+        {
+            Assembly[] result = new[]
+            {
+                Assembly.Load("Soa.Sample.IAuthorizedService")
+            };
+            return result;
         }
     }
 }

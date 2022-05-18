@@ -22,5 +22,8 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Soa\Soa.csproj" />
+    <ProjectReference Include="..\..\Services.Abstract\Soa.Sample.IAuthorizedService\Soa.Sample.IAuthorizedService.csproj" />
+    <ProjectReference Include="..\..\Services.Abstract\Soa.Sample.IService1\Soa.Sample.IService1.csproj" />
+    <ProjectReference Include="..\..\Services.Abstract\Soa.Sample.IService2\Soa.Sample.IService2.csproj" />
   </ItemGroup>
 </Project>

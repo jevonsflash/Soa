@@ -77,7 +77,6 @@ GatewaySampleWebHostModule.cs 文件
 1. 添加SoaClientModule模块依赖
 ```
 [DependsOn(typeof(SoaClientModule))]
-
 public class GatewaySampleWebHostModule: AbpModule
 {
     //Your code
@@ -94,18 +93,40 @@ IService1Manager.cs 文件
 1. 构建接口IService1Manager并继承于ISoaService
 2. 添加Soa标签和Abp标签
 ```
-[AbpAuthorize(PermissionNames.Pages_Users)]     //Abp标签
-[SoaServiceRoute("soa_api/service1")]           //SoaServiceRoute标签 
+[SoaAuthorize("permission_name")]     //Soa权限标签
+[SoaServiceRoute("soa_api/service1")]           //Soa服务路由标签 
 public interface IService1Manager : ISoaService
 {
     //定义接口    
-    [SoaService(CreatedBy = "linxiao", Comment = "get type by main id")]
-    public string GetSomething(long id);
+    [SoaService(CreatedBy = "linxiao", Comment = "bring a string to the world and say hello !")]
+    [SoaAuthorize("permission_name")]    
+    public string GetHelloWorld();
 
 }
 ```
 
 * 将微服务抽象层引用添加至网关（客户端） GatewaySample
+
+网关Ioc添加各微服务抽象层
+```
+var ass = Assembly.Load("Soa.Sample.IAuthorizedService");
+IocManager.RegisterAssemblyByConvention(ass);
+```
+
+网关引入各微服务权限
+```
+ Configuration.Authorization.Providers.Add<AuthorizedServiceAuthorizationProvider>();
+```
+
+网关引入各微服务本地化资源
+```
+var loc = Configuration.Localization;
+AuthorizedServiceLocalizationConfigurer.Configure(loc);
+```
+
+其他的Abp配置等等
+
+
 
 ### 微服务（服务端） Service1
 
@@ -137,9 +158,9 @@ Service1Manager.cs 文件
 public class Service1Manager : DomainService , IService1Manager
 {
     //实现业务
-    public string GetSomething(long id)
+    public string GetHelloWorld()
     {
-        return "hello_world";
+        return "hello world !";
     }
 }
 ```

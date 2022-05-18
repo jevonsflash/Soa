@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Soa.AuthorizedService.EntityFrameworkCore;
 using Soa.Sample.AuthorizedService.Configuration;
+using Soa.Sample.IAuthorizedService.Authorization;
 using Soa.Server;
 
 namespace Soa.Sample.AuthorizedService.Host
@@ -34,7 +35,6 @@ namespace Soa.Sample.AuthorizedService.Host
         {
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString("Default");
             Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
-            
         }
 
         public override void Initialize()

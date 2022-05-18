@@ -14,12 +14,7 @@
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <RootNamespace>Soa.Sample</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Remove="Migrations\**" />
-    <EmbeddedResource Remove="Migrations\**" />
-    <None Remove="Migrations\**" />
-  </ItemGroup>
-  <ItemGroup>
+	<ItemGroup>
     <PackageReference Include="Abp.EntityFrameworkCore" Version="7.1.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Analyzers" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
