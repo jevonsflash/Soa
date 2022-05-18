@@ -168,11 +168,13 @@ public class Service1Manager : DomainService , IService1Manager
 ```
 * 配置 appsettings.json 文件
 
+关于appsettings.json的配置，请参考 [配置说明](https://github.com/MatoApps/Soa/blob/master/SOA/Hangfire%20Guid-zh-Hans.md)
 
-完整示例请参考[Sample](https://github.com/MatoApps/Soa/tree/master/sample)
+关于Hangfire的配置，请参考 [定时任务](https://github.com/MatoApps/Soa/blob/master/SOA/Hangfire%20Guid-zh-Hans.md)
 
+完整示例请参考 [Sample](https://github.com/MatoApps/Soa/tree/master/sample)
 
-,配置说明式请阅读系列博客
+更多资讯请阅读系列博客
 
 ## 系列博客
 
