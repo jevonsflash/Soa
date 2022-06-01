@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Soa.Sample.AuthorizedService.Host": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
