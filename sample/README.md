@@ -9,8 +9,9 @@
 
 1. 运行网关和微服务前请确保数据库脚本已经运行
 2. 运行 SimpleRpcSample 以及微服务Service1， Service2，只需要跑sql脚本sampledb.sql
-3. 运行 GatewaySample 需要运行Ef Update-Database命令 之后运行 sql脚本gateway_sampledb.sql
-4. 运行 AuthorizedService 需要运行Ef Update-Database命令 之后运行 sql脚本authorized_service_db.sql
+3. 运行 GatewaySample 需要运行Ef Update-Database命令 
+~~之后运行 sql脚本gateway_sampledb.sql~~
+4. ~~运行 AuthorizedService 需要运行Ef Update-Database命令 之后运行 sql脚本authorized_service_db.sql~~
     ![img](https://raw.githubusercontent.com/MatoApps/Soa/master/SOA/Screenshot_12.png)
 5. 完成数据库配置后，启动微服务：  
 

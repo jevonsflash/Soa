@@ -9,6 +9,8 @@ using Soa.GatewaySample.Authorization.Roles;
 using Soa.GatewaySample.Authorization.Users;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
+using System.Collections.Generic;
+using Soa.Sample.IAuthorizedService.Authorization;
 
 namespace Soa.GatewaySample.EntityFrameworkCore.Seed.Host
 {
@@ -29,6 +31,9 @@ namespace Soa.GatewaySample.EntityFrameworkCore.Seed.Host
         private void CreateHostRoleAndUsers()
         {
             // Admin role for host
+            List<AuthorizationProvider> providers = new List<AuthorizationProvider>();
+            providers.Add(new GatewaySampleAuthorizationProvider());
+            providers.Add(new AuthorizedServiceAuthorizationProvider());
 
             var adminRoleForHost = _context.Roles.IgnoreQueryFilters().FirstOrDefault(r => r.TenantId == null && r.Name == StaticRoleNames.Host.Admin);
             if (adminRoleForHost == null)
@@ -46,10 +51,12 @@ namespace Soa.GatewaySample.EntityFrameworkCore.Seed.Host
                 .ToList();
 
             var permissions = PermissionFinder
-                .GetAllPermissions(new GatewaySampleAuthorizationProvider())
+                .GetAllPermissions(providers.ToArray())
                 .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Host) &&
                             !grantedPermissions.Contains(p.Name))
                 .ToList();
+
+
 
             if (permissions.Any())
             {

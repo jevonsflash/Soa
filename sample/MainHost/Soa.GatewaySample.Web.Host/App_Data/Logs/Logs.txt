@@ -11803,3 +11803,1177 @@ DEBUG 2022-05-18 10:08:37,826 [er #1] fire.Server.ServerJobCancellationWatcher -
 DEBUG 2022-05-18 10:08:37,826 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
 DEBUG 2022-05-18 10:08:38,128 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_f5afce7dd8e04a07865e2793511841b6' is being updated. RecurringJob: (CreatedAt:2022-05-18T02:07:54.8972331Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-05-18T02:08:23.0931637Z;LastJobId:248;NextExecution:2022-05-18T02:08:25.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-05-18T02:08:38.1239193Z;NextExecution:2022-05-18T02:08:40.0000000Z;LastJobId:249), NextExecution: (2022/5/18 2:08:40)
 DEBUG 2022-05-18 10:08:38,135 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+DEBUG 2022-06-01 11:20:51,131 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2022-06-01 11:20:51,716 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2022-06-01 11:20:51,728 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.Web.Host.Startup.GatewaySampleWebHostModule, Soa.GatewaySample.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,729 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.GatewaySampleWebCoreModule, Soa.GatewaySample.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.GatewaySampleApplicationModule, Soa.GatewaySample.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.GatewaySampleCoreModule, Soa.GatewaySample.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,730 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,731 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.EntityFrameworkCore.GatewaySampleEntityFrameworkModule, Soa.GatewaySample.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,732 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,733 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,733 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,733 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,733 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,733 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.SoaClientModule, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,734 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.SoaModule, Soa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:51,737 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2022-06-01 11:20:52,241 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 11:20:52,241 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 11:20:52,241 [1    ] o.Configuration.LanguageManagementConfig - Converted GatewaySample (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 11:20:52,241 [1    ] o.Configuration.LanguageManagementConfig - Converted AuthorizedService (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 11:20:52,241 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 11:20:53,054 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Soa.GatewaySample.EntityFrameworkCore.GatewaySampleDbContext, Soa.GatewaySample.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 11:20:56,180 [1    ] Abp.Localization.LocalizationManager     - Initializing 5 localization sources.
+DEBUG 2022-06-01 11:20:56,268 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2022-06-01 11:20:56,337 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2022-06-01 11:20:56,362 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: GatewaySample
+DEBUG 2022-06-01 11:20:56,366 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AuthorizedService
+DEBUG 2022-06-01 11:20:56,408 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2022-06-01 11:20:56,419 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2022-06-01 11:20:56,424 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[Soa.GatewaySample.MultiTenancy.Tenant, Soa.GatewaySample.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Soa.GatewaySample.Authorization.Users.User, Soa.GatewaySample.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+WARN  2022-06-01 11:21:02,378 [orker] oft.EntityFrameworkCore.Model.Validation - Entity 'Edition' has a global query filter defined and is the required end of a relationship with the entity 'EditionFeatureSetting'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+DEBUG 2022-06-01 11:41:19,087 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2022-06-01 12:04:01,358 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2022-06-01 12:04:01,465 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2022-06-01 12:04:01,480 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.Web.Host.Startup.GatewaySampleWebHostModule, Soa.GatewaySample.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,481 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.GatewaySampleWebCoreModule, Soa.GatewaySample.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.GatewaySampleApplicationModule, Soa.GatewaySample.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.GatewaySampleCoreModule, Soa.GatewaySample.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,482 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,483 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.EntityFrameworkCore.GatewaySampleEntityFrameworkModule, Soa.GatewaySample.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,484 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.SoaClientModule, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,485 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.SoaModule, Soa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:01,488 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2022-06-01 12:04:01,579 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:04:01,579 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:04:01,579 [1    ] o.Configuration.LanguageManagementConfig - Converted GatewaySample (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:04:01,579 [1    ] o.Configuration.LanguageManagementConfig - Converted AuthorizedService (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:04:01,579 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:04:02,127 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Soa.GatewaySample.EntityFrameworkCore.GatewaySampleDbContext, Soa.GatewaySample.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:04:04,524 [1    ] Abp.Localization.LocalizationManager     - Initializing 5 localization sources.
+DEBUG 2022-06-01 12:04:04,652 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2022-06-01 12:04:04,778 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2022-06-01 12:04:04,825 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: GatewaySample
+DEBUG 2022-06-01 12:04:04,834 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AuthorizedService
+DEBUG 2022-06-01 12:04:04,915 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2022-06-01 12:04:04,920 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2022-06-01 12:04:04,923 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[Soa.GatewaySample.MultiTenancy.Tenant, Soa.GatewaySample.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Soa.GatewaySample.Authorization.Users.User, Soa.GatewaySample.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+WARN  2022-06-01 12:04:10,723 [orker] oft.EntityFrameworkCore.Model.Validation - Entity 'Edition' has a global query filter defined and is the required end of a relationship with the entity 'EditionFeatureSetting'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+INFO  2022-06-01 12:04:10,923 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+ERROR 2022-06-01 12:04:15,164 [1    ] Hangfire.SqlServer.SqlServerStorage      - Was unable to use the TryAutoDetectSchemaDependentOptions option due to an exception.
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "GatewaySampleDb"。登录失败。
+用户 'DESKTOP-Q8B8BCV\Xamarin' 登录失败。
+   at System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken)
+   at System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:62f78146-0add-452e-a01b-e8c9a26c7b2b
+Error Number:4060,State:1,Class:11
+INFO  2022-06-01 12:04:15,200 [1    ] fire.SqlServer.SqlServerObjectsInstaller - Start installing Hangfire SQL objects...
+WARN  2022-06-01 12:04:15,206 [1    ] fire.SqlServer.SqlServerObjectsInstaller - An exception occurred while trying to perform the migration. Retrying...
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "GatewaySampleDb"。登录失败。
+用户 'DESKTOP-Q8B8BCV\Xamarin' 登录失败。
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:62f78146-0add-452e-a01b-e8c9a26c7b2b
+Error Number:4060,State:1,Class:11
+WARN  2022-06-01 12:04:15,208 [1    ] fire.SqlServer.SqlServerObjectsInstaller - An exception occurred while trying to perform the migration. Retrying...
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "GatewaySampleDb"。登录失败。
+用户 'DESKTOP-Q8B8BCV\Xamarin' 登录失败。
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:62f78146-0add-452e-a01b-e8c9a26c7b2b
+Error Number:4060,State:1,Class:11
+WARN  2022-06-01 12:04:15,209 [1    ] fire.SqlServer.SqlServerObjectsInstaller - An exception occurred while trying to perform the migration.
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "GatewaySampleDb"。登录失败。
+用户 'DESKTOP-Q8B8BCV\Xamarin' 登录失败。
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:62f78146-0add-452e-a01b-e8c9a26c7b2b
+Error Number:4060,State:1,Class:11
+WARN  2022-06-01 12:04:15,209 [1    ] fire.SqlServer.SqlServerObjectsInstaller - Was unable to perform the Hangfire schema migration due to an exception. Ignore this message unless you've just installed or upgraded Hangfire.
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "GatewaySampleDb"。登录失败。
+用户 'DESKTOP-Q8B8BCV\Xamarin' 登录失败。
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:62f78146-0add-452e-a01b-e8c9a26c7b2b
+Error Number:4060,State:1,Class:11
+DEBUG 2022-06-01 12:04:15,212 [1    ] .HangfireBackgroundJobFullFeatrueManager - Start background worker: Soa.Hangfire.HangfireBackgroundJobFullFeatrueManager
+INFO  2022-06-01 12:04:15,219 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server using job storage: 'SQL Server: localhost@GatewaySampleDb'
+INFO  2022-06-01 12:04:15,219 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+INFO  2022-06-01 12:04:15,219 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+DEBUG 2022-06-01 12:04:15,235 [ss #1] Hangfire.Processing.BackgroundExecution  - Execution loop BackgroundServerProcess:0066f7f1 has started in 8.3535 ms
+DEBUG 2022-06-01 12:04:15,237 [ss #1] Hangfire.Server.BackgroundServerProcess  - Server desktop-q8b8bcv:18980:11edaea9 is announcing itself...
+ERROR 2022-06-01 12:04:15,241 [ss #1] Hangfire.Processing.BackgroundExecution  - Execution BackgroundServerProcess is in the Failed state now due to an exception, execution will be retried no more than in 00:00:15
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "GatewaySampleDb"。登录失败。
+用户 'DESKTOP-Q8B8BCV\Xamarin' 登录失败。
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:62f78146-0add-452e-a01b-e8c9a26c7b2b
+Error Number:4060,State:1,Class:11
+DEBUG 2022-06-01 12:04:15,242 [ss #1] Hangfire.Processing.BackgroundExecution  - Execution loop BackgroundServerProcess:0066f7f1 caught an exception and will be retried in 00:00:15
+System.Data.SqlClient.SqlException (0x80131904): 无法打开登录所请求的数据库 "GatewaySampleDb"。登录失败。
+用户 'DESKTOP-Q8B8BCV\Xamarin' 登录失败。
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   at System.Data.SqlClient.SqlConnection.Open()
+   at Hangfire.SqlServer.SqlServerStorage.CreateAndOpenConnection()
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection(DbConnection dedicatedConnection, Action`1 action)
+   at Hangfire.SqlServer.SqlServerConnection.AnnounceServer(String serverId, ServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.CreateServer(BackgroundServerContext context)
+   at Hangfire.Server.BackgroundServerProcess.Execute(Guid executionId, BackgroundExecution execution, CancellationToken stoppingToken, CancellationToken stoppedToken, CancellationToken shutdownToken)
+   at Hangfire.Server.BackgroundProcessingServer.RunServer(Guid executionId, Object state)
+   at Hangfire.Processing.BackgroundExecution.Run(Action`2 callback, Object state)
+ClientConnectionId:62f78146-0add-452e-a01b-e8c9a26c7b2b
+Error Number:4060,State:1,Class:11
+DEBUG 2022-06-01 12:04:15,243 [ss #1] Hangfire.Processing.BackgroundExecution  - Execution loop BackgroundServerProcess:0066f7f1 will be retried in 00:00:15...
+DEBUG 2022-06-01 12:04:15,296 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2022-06-01 12:04:15,296 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2022-06-01 12:04:15,300 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Users.Dto.CreateUserDto
+DEBUG 2022-06-01 12:04:15,300 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Users.Dto.UserDto
+DEBUG 2022-06-01 12:04:15,300 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2022-06-01 12:04:15,301 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Sessions.Dto.UserLoginInfoDto
+DEBUG 2022-06-01 12:04:15,301 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Roles.Dto.PermissionDto
+DEBUG 2022-06-01 12:04:15,301 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2022-06-01 12:04:15,301 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.MultiTenancy.Dto.TenantDto
+INFO  2022-06-01 12:04:15,443 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+ERROR 2022-06-01 12:04:21,276 [orker] .EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'GatewaySampleDb' on server 'localhost'.
+ERROR 2022-06-01 12:04:21,276 [1    ] .EntityFrameworkCore.Database.Connection - An error occurred using the connection to database 'GatewaySampleDb' on server 'localhost'.
+DEBUG 2022-06-01 12:05:04,280 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2022-06-01 12:05:04,360 [1    ] Abp.Modules.AbpModuleManager             - Found 18 ABP modules in total.
+DEBUG 2022-06-01 12:05:04,383 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.Web.Host.Startup.GatewaySampleWebHostModule, Soa.GatewaySample.Web.Host, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,385 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.GatewaySampleWebCoreModule, Soa.GatewaySample.Web.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,385 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.GatewaySampleApplicationModule, Soa.GatewaySample.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,386 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.GatewaySampleCoreModule, Soa.GatewaySample.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,386 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,386 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,387 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,387 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,387 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,387 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.GatewaySample.EntityFrameworkCore.GatewaySampleEntityFrameworkModule, Soa.GatewaySample.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,388 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.AbpAspNetCoreModule, Abp.AspNetCore, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AspNetCore.SignalR.AbpAspNetCoreSignalRModule, Abp.AspNetCore.SignalR, Version=7.1.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.SoaClientModule, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,389 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Soa.SoaModule, Soa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:04,391 [1    ] Abp.Modules.AbpModuleManager             - 18 modules loaded.
+DEBUG 2022-06-01 12:05:04,479 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:05:04,479 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:05:04,479 [1    ] o.Configuration.LanguageManagementConfig - Converted GatewaySample (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:05:04,479 [1    ] o.Configuration.LanguageManagementConfig - Converted AuthorizedService (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:05:04,479 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2022-06-01 12:05:05,006 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: Soa.GatewaySample.EntityFrameworkCore.GatewaySampleDbContext, Soa.GatewaySample.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2022-06-01 12:05:07,470 [1    ] Abp.Localization.LocalizationManager     - Initializing 5 localization sources.
+DEBUG 2022-06-01 12:05:07,536 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2022-06-01 12:05:07,581 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2022-06-01 12:05:07,600 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: GatewaySample
+DEBUG 2022-06-01 12:05:07,603 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AuthorizedService
+DEBUG 2022-06-01 12:05:07,630 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2022-06-01 12:05:07,635 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2022-06-01 12:05:07,637 [1    ] , Culture=neutral, PublicKeyToken=null]] - Start background worker: Abp.Authorization.Users.UserTokenExpirationWorker`2[[Soa.GatewaySample.MultiTenancy.Tenant, Soa.GatewaySample.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Soa.GatewaySample.Authorization.Users.User, Soa.GatewaySample.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+ERROR 2022-06-01 12:05:07,936 [1    ] Hangfire.SqlServer.SqlServerStorage      - Was unable to use the TryAutoDetectSchemaDependentOptions option due to an exception.
+System.Data.SqlClient.SqlException (0x80131904): 对象名 'HangFire.Schema' 无效。
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command)
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)
+   at Hangfire.SqlServer.SqlServerStorage.<>c__DisplayClass43_0.<Initialize>b__0(DbConnection connection)
+   at Hangfire.SqlServer.SqlServerStorage.<>c__DisplayClass34_0.<UseConnection>b__0(DbConnection connection)
+   at Hangfire.SqlServer.SqlServerStorage.UseConnection[T](DbConnection dedicatedConnection, Func`2 func)
+   at Hangfire.SqlServer.SqlServerStorage.Initialize()
+ClientConnectionId:29085cf9-e773-42a1-bd8b-5fa101ef2f43
+Error Number:208,State:1,Class:16
+INFO  2022-06-01 12:05:07,951 [1    ] fire.SqlServer.SqlServerObjectsInstaller - Start installing Hangfire SQL objects...
+INFO  2022-06-01 12:05:08,196 [1    ] fire.SqlServer.SqlServerObjectsInstaller - Hangfire SQL objects installed.
+DEBUG 2022-06-01 12:05:08,198 [1    ] .HangfireBackgroundJobFullFeatrueManager - Start background worker: Soa.Hangfire.HangfireBackgroundJobFullFeatrueManager
+INFO  2022-06-01 12:05:08,208 [1    ] Hangfire.BackgroundJobServer             - Starting Hangfire Server using job storage: 'SQL Server: localhost@GatewaySampleDb'
+INFO  2022-06-01 12:05:08,208 [1    ] Hangfire.BackgroundJobServer             - Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+INFO  2022-06-01 12:05:08,208 [1    ] Hangfire.BackgroundJobServer             - Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+DEBUG 2022-06-01 12:05:08,228 [ss #1] Hangfire.Processing.BackgroundExecution  - Execution loop BackgroundServerProcess:8b10bcfe has started in 8.7148 ms
+DEBUG 2022-06-01 12:05:08,230 [ss #1] Hangfire.Server.BackgroundServerProcess  - Server desktop-q8b8bcv:13248:99446a7e is announcing itself...
+DEBUG 2022-06-01 12:05:08,268 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 8 classes define auto mapping attributes
+DEBUG 2022-06-01 12:05:08,268 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Models.TokenAuth.ExternalLoginProviderInfoModel
+DEBUG 2022-06-01 12:05:08,272 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Users.Dto.CreateUserDto
+DEBUG 2022-06-01 12:05:08,272 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Users.Dto.UserDto
+DEBUG 2022-06-01 12:05:08,273 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2022-06-01 12:05:08,273 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Sessions.Dto.UserLoginInfoDto
+DEBUG 2022-06-01 12:05:08,273 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.Roles.Dto.PermissionDto
+DEBUG 2022-06-01 12:05:08,273 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2022-06-01 12:05:08,273 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Soa.GatewaySample.MultiTenancy.Dto.TenantDto
+INFO  2022-06-01 12:05:08,351 [ss #1] Hangfire.Server.BackgroundServerProcess  - Server desktop-q8b8bcv:13248:99446a7e successfully announced in 120.4972 ms
+INFO  2022-06-01 12:05:08,355 [ss #1] Hangfire.Server.BackgroundServerProcess  - Server desktop-q8b8bcv:13248:99446a7e is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+DEBUG 2022-06-01 12:05:08,358 [ss #1] Hangfire.Processing.BackgroundExecution  - Execution loop ServerHeartbeatProcess:2eea54c3 has started in 6.4675 ms
+DEBUG 2022-06-01 12:05:08,362 [og #1] Hangfire.Processing.BackgroundExecution  - Execution loop ServerWatchdog:14c2b338 has started in 6.9803 ms
+DEBUG 2022-06-01 12:05:08,366 [er #1] Hangfire.Processing.BackgroundExecution  - Execution loop ServerJobCancellationWatcher:8b50368f has started in 5.7135 ms
+DEBUG 2022-06-01 12:05:08,370 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:08,370 [er #1] Hangfire.Processing.BackgroundExecution  - Execution loop ExpirationManager:299914da has started in 6.2007 ms
+DEBUG 2022-06-01 12:05:08,371 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+DEBUG 2022-06-01 12:05:08,374 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:05:08,374 [or #1] Hangfire.Processing.BackgroundExecution  - Execution loop CountersAggregator:4439f66c has started in 6.3948 ms
+DEBUG 2022-06-01 12:05:08,376 [or #1] Hangfire.SqlServer.CountersAggregator    - Aggregating records in 'Counter' table...
+DEBUG 2022-06-01 12:05:08,376 [er #1] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'AggregatedCounter' table...
+DEBUG 2022-06-01 12:05:08,379 [er #1] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:76ff44f3 has started in 7.2681 ms
+DEBUG 2022-06-01 12:05:08,383 [er #2] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:579a2bd5 has started in 11.5923 ms
+DEBUG 2022-06-01 12:05:08,387 [er #3] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:91724f10 has started in 15.5838 ms
+DEBUG 2022-06-01 12:05:08,392 [er #4] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:3564bd2e has started in 20.1691 ms
+DEBUG 2022-06-01 12:05:08,396 [or #1] Hangfire.SqlServer.CountersAggregator    - Records from the 'Counter' table aggregated.
+DEBUG 2022-06-01 12:05:08,396 [er #5] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:7fd29d6a has started in 24.6796 ms
+DEBUG 2022-06-01 12:05:08,400 [er #6] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:183105a0 has started in 28.918 ms
+DEBUG 2022-06-01 12:05:08,405 [er #7] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:4096bfed has started in 33.2866 ms
+DEBUG 2022-06-01 12:05:08,408 [er #8] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:5c8a7fbf has started in 36.9284 ms
+DEBUG 2022-06-01 12:05:08,412 [er #9] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:4f7a9e82 has started in 40.3622 ms
+DEBUG 2022-06-01 12:05:08,416 [r #10] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:ef91c6d9 has started in 44.4477 ms
+DEBUG 2022-06-01 12:05:08,420 [r #11] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:bac05c24 has started in 48.9036 ms
+DEBUG 2022-06-01 12:05:08,424 [r #12] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:afa6542a has started in 52.2805 ms
+DEBUG 2022-06-01 12:05:08,428 [r #13] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:d2b4f2ca has started in 56.6773 ms
+DEBUG 2022-06-01 12:05:08,433 [r #14] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:ef43ab2e has started in 61.8034 ms
+DEBUG 2022-06-01 12:05:08,438 [r #15] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:2571569d has started in 66.7044 ms
+DEBUG 2022-06-01 12:05:08,444 [r #16] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:bf3f80d4 has started in 71.8265 ms
+DEBUG 2022-06-01 12:05:08,448 [r #17] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:521a743b has started in 76.5886 ms
+DEBUG 2022-06-01 12:05:08,452 [r #18] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:bfecc8e8 has started in 81.0165 ms
+DEBUG 2022-06-01 12:05:08,458 [r #19] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:aaf0815e has started in 86.0481 ms
+DEBUG 2022-06-01 12:05:08,462 [r #20] Hangfire.Processing.BackgroundExecution  - Execution loop Worker:aa82913f has started in 90.3177 ms
+DEBUG 2022-06-01 12:05:08,467 [er #1] Hangfire.Processing.BackgroundExecution  - Execution loop DelayedJobScheduler:8d96bb3b has started in 8.5757 ms
+INFO  2022-06-01 12:05:08,467 [ss #1] Hangfire.Server.BackgroundServerProcess  - Server desktop-q8b8bcv:13248:99446a7e all the dispatchers started
+DEBUG 2022-06-01 12:05:08,473 [er #1] Hangfire.Processing.BackgroundExecution  - Execution loop RecurringJobScheduler:8aa82f68 has started in 9.0115 ms
+DEBUG 2022-06-01 12:05:08,479 [er #1] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'AggregatedCounter' table.
+DEBUG 2022-06-01 12:05:08,480 [er #1] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Job' table...
+DEBUG 2022-06-01 12:05:08,492 [er #1] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Job' table.
+DEBUG 2022-06-01 12:05:08,492 [er #1] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'List' table...
+DEBUG 2022-06-01 12:05:08,512 [er #1] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'List' table.
+DEBUG 2022-06-01 12:05:08,512 [er #1] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Set' table...
+DEBUG 2022-06-01 12:05:08,514 [er #1] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Set' table.
+DEBUG 2022-06-01 12:05:08,514 [er #1] Hangfire.SqlServer.ExpirationManager     - Removing outdated records from the 'Hash' table...
+DEBUG 2022-06-01 12:05:08,516 [er #1] Hangfire.SqlServer.ExpirationManager     - Outdated records removed from the 'Hash' table.
+WARN  2022-06-01 12:05:09,352 [1    ] oft.EntityFrameworkCore.Model.Validation - Entity 'Edition' has a global query filter defined and is the required end of a relationship with the entity 'EditionFeatureSetting'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+INFO  2022-06-01 12:05:09,562 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:10,011 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[DisplayName], [a].[IsDeleted], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name]
+FROM [AbpEditions] AS [a]
+WHERE [a].[Name] = N'Standard'
+INFO  2022-06-01 12:05:10,198 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (37ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,207 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,211 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,216 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,220 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,227 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,233 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,237 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,241 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,245 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,248 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,251 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,255 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__language_Name_1='?' (Size = 128)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpLanguages] AS [a]
+        WHERE [a].[TenantId] IS NULL AND ([a].[Name] = @__language_Name_1)) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,273 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[Description], [a].[DisplayName], [a].[IsDefault], [a].[IsDeleted], [a].[IsStatic], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[NormalizedName], [a].[TenantId]
+FROM [AbpRoles] AS [a]
+WHERE [a].[TenantId] IS NULL AND ([a].[Name] = N'Admin')
+INFO  2022-06-01 12:05:10,349 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__adminRoleForHost_Id_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Name]
+FROM [AbpPermissions] AS [a]
+WHERE ([a].[Discriminator] = N'RolePermissionSetting') AND ([a].[TenantId] IS NULL AND ([a].[RoleId] = @__adminRoleForHost_Id_0))
+INFO  2022-06-01 12:05:10,362 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AuthenticationSource], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EmailAddress], [a].[EmailConfirmationCode], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockoutEnabled], [a].[IsPhoneNumberConfirmed], [a].[IsTwoFactorEnabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[LockoutEndDateUtc], [a].[Name], [a].[NormalizedEmailAddress], [a].[NormalizedUserName], [a].[Password], [a].[PasswordResetCode], [a].[PhoneNumber], [a].[SecurityStamp], [a].[Surname], [a].[TenantId], [a].[UserName]
+FROM [AbpUsers] AS [a]
+WHERE [a].[TenantId] IS NULL AND ([a].[UserName] = N'admin')
+INFO  2022-06-01 12:05:10,443 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND [a].[TenantId] IS NULL) AND [a].[UserId] IS NULL) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,447 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND [a].[TenantId] IS NULL) AND [a].[UserId] IS NULL) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,450 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 256)], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AbpSettings] AS [a]
+        WHERE (([a].[Name] = @__name_0) AND [a].[TenantId] IS NULL) AND [a].[UserId] IS NULL) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+INFO  2022-06-01 12:05:10,513 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConnectionString], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EditionId], [a].[IsActive], [a].[IsDeleted], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenancyName]
+FROM [AbpTenants] AS [a]
+WHERE [a].[TenancyName] = N'Default'
+INFO  2022-06-01 12:05:10,552 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[Description], [a].[DisplayName], [a].[IsDefault], [a].[IsDeleted], [a].[IsStatic], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[NormalizedName], [a].[TenantId]
+FROM [AbpRoles] AS [a]
+WHERE ([a].[TenantId] = @___tenantId_0) AND ([a].[Name] = N'Admin')
+INFO  2022-06-01 12:05:10,559 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@___tenantId_0='?' (DbType = Int32), @__adminRole_Id_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Name]
+FROM [AbpPermissions] AS [a]
+WHERE ([a].[Discriminator] = N'RolePermissionSetting') AND (([a].[TenantId] = @___tenantId_0) AND ([a].[RoleId] = @__adminRole_Id_1))
+INFO  2022-06-01 12:05:10,570 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@___tenantId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[AuthenticationSource], [a].[ConcurrencyStamp], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[EmailAddress], [a].[EmailConfirmationCode], [a].[IsActive], [a].[IsDeleted], [a].[IsEmailConfirmed], [a].[IsLockoutEnabled], [a].[IsPhoneNumberConfirmed], [a].[IsTwoFactorEnabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[LockoutEndDateUtc], [a].[Name], [a].[NormalizedEmailAddress], [a].[NormalizedUserName], [a].[Password], [a].[PasswordResetCode], [a].[PhoneNumber], [a].[SecurityStamp], [a].[Surname], [a].[TenantId], [a].[UserName]
+FROM [AbpUsers] AS [a]
+WHERE ([a].[TenantId] = @___tenantId_0) AND ([a].[UserName] = N'admin')
+DEBUG 2022-06-01 12:05:10,692 [1    ] Client.HealthCheck.HealthCheckJobManager - Start background worker: Soa.Client.HealthCheck.HealthCheckJobManager
+DEBUG 2022-06-01 12:05:10,757 [1    ] Hangfire.RecurringJobManager             - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (), Changes: (Queue:default;Cron:0/5 * * * * ? ;TimeZoneId:China Standard Time;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};CreatedAt:2022-06-01T04:05:10.7145576Z;NextExecution:2022-06-01T04:05:10.0000000Z;V:2), NextExecution: (2022/6/1 4:05:10)
+DEBUG 2022-06-01 12:05:10,801 [1    ] ent.Discovery.ServiceDiscoveryJobManager - Start background worker: Soa.Client.Discovery.ServiceDiscoveryJobManager
+DEBUG 2022-06-01 12:05:10,893 [1    ] Hangfire.RecurringJobManager             - Recurring job 'ServiceDiscoveryJob_2f2a3ca193ee450c8070455db64eba47' is being updated. RecurringJob: (), Changes: (Queue:default;Cron:0 * * * * ? ;TimeZoneId:China Standard Time;Job:{"Type":"Soa.Client.Discovery.ServiceDiscoveryJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.Discovery.ServiceDiscoveryJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{}\"]"};CreatedAt:2022-06-01T04:05:10.8922178Z;NextExecution:2022-06-01T04:06:00.0000000Z;V:2), NextExecution: (2022/6/1 4:06:00)
+INFO  2022-06-01 12:05:10,925 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:10,966 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean), @__ef_filter__p_1='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[DeleterUserId], [a].[DeletionTime], [a].[DisplayName], [a].[Icon], [a].[IsDeleted], [a].[IsDisabled], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenantId]
+FROM [AbpLanguages] AS [a]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR ([a].[IsDeleted] = CAST(0 AS bit))) AND ((@__ef_filter__p_1 = CAST(1 AS bit)) OR [a].[TenantId] IS NULL)
+INFO  2022-06-01 12:05:11,051 [1    ] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:11,070 [1    ] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (DbType = Boolean)], CommandType='Text', CommandTimeout='30']
+SELECT [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[LastModificationTime], [a].[LastModifierUserId], [a].[Name], [a].[TenantId], [a].[UserId], [a].[Value]
+FROM [AbpSettings] AS [a]
+WHERE ((@__ef_filter__p_0 = CAST(1 AS bit)) OR [a].[TenantId] IS NULL) AND ([a].[UserId] IS NULL AND [a].[TenantId] IS NULL)
+INFO  2022-06-01 12:05:11,109 [1    ] tCore.Builder.RequestLocalizationOptions - Supported Request Localization Cultures: zh-Hans,ja,en,es-MX,fr,de,it,nl,pt-BR,tr,ru,ar,fa
+WARN  2022-06-01 12:05:11,932 [1    ] Microsoft.AspNetCore.Server.Kestrel      - Overriding address(es) 'https://localhost:44311/'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+INFO  2022-06-01 12:05:11,976 [1    ] Microsoft.Hosting.Lifetime               - Now listening on: https://localhost:44311
+INFO  2022-06-01 12:05:11,982 [1    ] Microsoft.Hosting.Lifetime               - Application started. Press Ctrl+C to shut down.
+INFO  2022-06-01 12:05:11,985 [1    ] Microsoft.Hosting.Lifetime               - Hosting environment: Development
+INFO  2022-06-01 12:05:11,987 [1    ] Microsoft.Hosting.Lifetime               - Content root path: D:\Project\微服务培训\Soa\Main\Soa\sample\MainHost\Soa.GatewaySample.Web.Host
+INFO  2022-06-01 12:05:12,663 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:12,679 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:13,387 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:13,387 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:05:13,485 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/ - -
+INFO  2022-06-01 12:05:13,818 [orker] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Soa.GatewaySample.Web.Host.Controllers.HomeController.Index (Soa.GatewaySample.Web.Host)'
+INFO  2022-06-01 12:05:13,854 [orker] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Soa.GatewaySample.Web.Host.Controllers.HomeController (Soa.GatewaySample.Web.Host).
+INFO  2022-06-01 12:05:13,890 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:14,046 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2022-06-01 12:05:14,139 [orker] vc.Infrastructure.RedirectResultExecutor - Executing RedirectResult, redirecting to /swagger.
+INFO  2022-06-01 12:05:14,149 [orker] c.Infrastructure.ControllerActionInvoker - Executed action Soa.GatewaySample.Web.Host.Controllers.HomeController.Index (Soa.GatewaySample.Web.Host) in 286.3167ms
+INFO  2022-06-01 12:05:14,152 [orker] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Soa.GatewaySample.Web.Host.Controllers.HomeController.Index (Soa.GatewaySample.Web.Host)'
+INFO  2022-06-01 12:05:14,165 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/ - - - 302 0 - 682.1407ms
+INFO  2022-06-01 12:05:14,172 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger - -
+INFO  2022-06-01 12:05:14,208 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger - - - 301 0 - 35.3544ms
+INFO  2022-06-01 12:05:14,215 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/index.html - -
+INFO  2022-06-01 12:05:14,442 [54   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/index.html - - - 200 - text/html;charset=utf-8 227.0418ms
+INFO  2022-06-01 12:05:14,453 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui.css - -
+INFO  2022-06-01 12:05:14,456 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui-bundle.js - -
+INFO  2022-06-01 12:05:14,458 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/ui/abp.js - -
+INFO  2022-06-01 12:05:14,462 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui-standalone-preset.js - -
+INFO  2022-06-01 12:05:14,466 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/ui/abp.swagger.js - -
+INFO  2022-06-01 12:05:14,471 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - -
+INFO  2022-06-01 12:05:14,481 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - - 200 12022 application/javascript;+charset=utf-8 13.4333ms
+INFO  2022-06-01 12:05:14,491 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - -
+INFO  2022-06-01 12:05:14,495 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+INFO  2022-06-01 12:05:14,499 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'D:\Project\微服务培训\Soa\Main\Soa\sample\MainHost\Soa.GatewaySample.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2022-06-01 12:05:14,503 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - -
+INFO  2022-06-01 12:05:14,507 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'D:\Project\微服务培训\Soa\Main\Soa\sample\MainHost\Soa.GatewaySample.Web.Host\wwwroot\swagger\ui\abp.swagger.js'
+INFO  2022-06-01 12:05:14,536 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/ui/abp.js - - - 200 3697 application/javascript 72.8304ms
+INFO  2022-06-01 12:05:14,540 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui.css - - - 200 143632 text/css 79.1089ms
+INFO  2022-06-01 12:05:14,553 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/ui/abp.swagger.js - -
+INFO  2022-06-01 12:05:14,557 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/ui/abp.swagger.js - - - 200 8029 application/javascript 82.4095ms
+INFO  2022-06-01 12:05:14,560 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2022-06-01 12:05:14,562 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/ui/abp.js - -
+INFO  2022-06-01 12:05:14,567 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_framework/aspnetcore-browser-refresh.js - - - 200 12022 application/javascript;+charset=utf-8 66.5811ms
+INFO  2022-06-01 12:05:14,571 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.swagger.js'. Physical path: 'D:\Project\微服务培训\Soa\Main\Soa\sample\MainHost\Soa.GatewaySample.Web.Host\wwwroot\swagger\ui\abp.swagger.js'
+INFO  2022-06-01 12:05:14,577 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 120.0920ms
+INFO  2022-06-01 12:05:14,580 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/ui/abp.swagger.js - - - 200 8029 application/javascript 36.6224ms
+INFO  2022-06-01 12:05:14,587 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger/ui/abp.js'. Physical path: 'D:\Project\微服务培训\Soa\Main\Soa\sample\MainHost\Soa.GatewaySample.Web.Host\wwwroot\swagger\ui\abp.js'
+INFO  2022-06-01 12:05:14,591 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/ui/abp.js - - - 200 3697 application/javascript 33.4109ms
+INFO  2022-06-01 12:05:14,594 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2022-06-01 12:05:14,598 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 141.7405ms
+INFO  2022-06-01 12:05:14,606 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui-standalone-preset.js - -
+INFO  2022-06-01 12:05:14,608 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/swagger-ui-bundle.js - -
+INFO  2022-06-01 12:05:14,614 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+INFO  2022-06-01 12:05:14,619 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 12.9296ms
+INFO  2022-06-01 12:05:14,624 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+INFO  2022-06-01 12:05:14,627 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 21.3954ms
+INFO  2022-06-01 12:05:14,674 [54   ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 185.4763ms
+INFO  2022-06-01 12:05:14,845 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - -
+INFO  2022-06-01 12:05:14,850 [orker] ft.AspNetCore.Routing.EndpointMiddleware - Executing endpoint 'Soa.GatewaySample.Web.Host.Controllers.AntiForgeryController.SetCookie (Soa.GatewaySample.Web.Host)'
+INFO  2022-06-01 12:05:14,859 [orker] c.Infrastructure.ControllerActionInvoker - Route matched with {action = "SetCookie", controller = "AntiForgery", area = ""}. Executing controller action with signature Void SetCookie() on controller Soa.GatewaySample.Web.Host.Controllers.AntiForgeryController (Soa.GatewaySample.Web.Host).
+INFO  2022-06-01 12:05:14,871 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:14,881 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 512), @p1='?' (Size = 64), @p2='?' (Size = 128), @p3='?' (Size = 2000), @p4='?' (Size = 2000), @p5='?' (Size = 1024), @p6='?' (DbType = Int32), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32), @p9='?' (DbType = Int64), @p10='?' (Size = 256), @p11='?' (Size = 1024), @p12='?' (Size = 4000), @p13='?' (Size = 256), @p14='?' (DbType = Int32), @p15='?' (DbType = Int64)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AbpAuditLogs] ([BrowserInfo], [ClientIpAddress], [ClientName], [CustomData], [Exception], [ExceptionMessage], [ExecutionDuration], [ExecutionTime], [ImpersonatorTenantId], [ImpersonatorUserId], [MethodName], [Parameters], [ReturnValue], [ServiceName], [TenantId], [UserId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15);
+SELECT [Id]
+FROM [AbpAuditLogs]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+INFO  2022-06-01 12:05:14,915 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - -
+INFO  2022-06-01 12:05:14,920 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/swagger/favicon-32x32.png - -
+INFO  2022-06-01 12:05:14,925 [orker] NetCore.StaticFiles.StaticFileMiddleware - Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+INFO  2022-06-01 12:05:14,928 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/favicon-32x32.png - - - 200 628 image/png 9.0143ms
+INFO  2022-06-01 12:05:14,932 [orker] .Mvc.Infrastructure.ObjectResultExecutor - Executing ObjectResult, writing value of type 'Abp.Web.Models.AjaxResponse'.
+INFO  2022-06-01 12:05:14,966 [orker] c.Infrastructure.ControllerActionInvoker - Executed action Soa.GatewaySample.Web.Host.Controllers.AntiForgeryController.SetCookie (Soa.GatewaySample.Web.Host) in 102.7449ms
+INFO  2022-06-01 12:05:14,969 [orker] ft.AspNetCore.Routing.EndpointMiddleware - Executed endpoint 'Soa.GatewaySample.Web.Host.Controllers.AntiForgeryController.SetCookie (Soa.GatewaySample.Web.Host)'
+INFO  2022-06-01 12:05:14,973 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/AntiForgery/SetCookie - - - 200 101 application/json;+charset=utf-8 129.6675ms
+INFO  2022-06-01 12:05:15,074 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 189.1965ms
+INFO  2022-06-01 12:05:16,605 [orker] Microsoft.AspNetCore.Hosting.Diagnostics - Request starting HTTP/2 GET https://localhost:44311/_vs/browserLink - -
+INFO  2022-06-01 12:05:16,620 [7    ] Microsoft.AspNetCore.Hosting.Diagnostics - Request finished HTTP/2 GET https://localhost:44311/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 15.3183ms
+INFO  2022-06-01 12:05:17,704 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:17,726 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (13ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:18,401 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:18,402 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:05:22,751 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:22,755 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:23,417 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:23,417 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:05:23,564 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};NextExecution:2022-06-01T04:05:10.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:05:23.5270500Z;NextExecution:2022-06-01T04:05:25.0000000Z;LastJobId:1), NextExecution: (2022/6/1 4:05:25)
+DEBUG 2022-06-01 12:05:23,570 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:05:27,778 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:27,781 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:28,427 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:28,428 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:05:32,797 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:32,801 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:33,432 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:33,432 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:05:37,825 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:37,829 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:38,386 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e heartbeat successfully sent
+DEBUG 2022-06-01 12:05:38,386 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+DEBUG 2022-06-01 12:05:38,441 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:38,441 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:05:38,584 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:05:23.5270500Z;LastJobId:1;NextExecution:2022-06-01T04:05:25.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:05:38.5820832Z;NextExecution:2022-06-01T04:05:40.0000000Z;LastJobId:2), NextExecution: (2022/6/1 4:05:40)
+DEBUG 2022-06-01 12:05:38,585 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:05:42,844 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:42,848 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:43,444 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:43,444 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:05:47,867 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:47,871 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:48,453 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:48,453 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:05:52,878 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:52,883 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:53,465 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:53,465 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:05:53,594 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:05:38.5820832Z;LastJobId:2;NextExecution:2022-06-01T04:05:40.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:05:53.5889670Z;NextExecution:2022-06-01T04:05:55.0000000Z;LastJobId:3), NextExecution: (2022/6/1 4:05:55)
+DEBUG 2022-06-01 12:05:53,604 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:05:57,901 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:05:57,906 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:05:58,473 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:05:58,473 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:06:02,914 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:02,917 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:03,486 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:03,487 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:06:07,950 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:07,957 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:08,401 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e heartbeat successfully sent
+DEBUG 2022-06-01 12:06:08,401 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+DEBUG 2022-06-01 12:06:08,492 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:08,492 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:06:08,618 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:05:53.5889670Z;LastJobId:3;NextExecution:2022-06-01T04:05:55.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:06:08.6151642Z;NextExecution:2022-06-01T04:06:10.0000000Z;LastJobId:4), NextExecution: (2022/6/1 4:06:10)
+DEBUG 2022-06-01 12:06:08,620 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'ServiceDiscoveryJob_2f2a3ca193ee450c8070455db64eba47' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.8922178Z;Cron:0 * * * * ? ;Job:{"Type":"Soa.Client.Discovery.ServiceDiscoveryJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.Discovery.ServiceDiscoveryJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{}\"]"};NextExecution:2022-06-01T04:06:00.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:06:08.6151642Z;NextExecution:2022-06-01T04:07:00.0000000Z;LastJobId:5), NextExecution: (2022/6/1 4:07:00)
+DEBUG 2022-06-01 12:06:08,624 [er #1] Hangfire.Server.RecurringJobScheduler    - 2 recurring job(s) processed by scheduler.
+DEBUG 2022-06-01 12:06:08,746 [orker] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8007
+DEBUG 2022-06-01 12:06:08,763 [orker] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8007
+DEBUG 2022-06-01 12:06:08,764 [orker] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8007
+DEBUG 2022-06-01 12:06:08,765 [orker] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:06:08,766 [orker] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:06:09,168 [61   ] Abp.Logging.LogHelper                    - receive response of msg: 8068134e7b9048d086bf9c933bd6986d
+DEBUG 2022-06-01 12:06:09,174 [61   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: 8068134e7b9048d086bf9c933bd6986d
+DEBUG 2022-06-01 12:06:09,191 [61   ] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8008
+DEBUG 2022-06-01 12:06:09,191 [61   ] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8008
+DEBUG 2022-06-01 12:06:09,191 [61   ] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8008
+DEBUG 2022-06-01 12:06:09,191 [61   ] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:06:09,191 [61   ] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:06:09,347 [7    ] Abp.Logging.LogHelper                    - receive response of msg: 82b32b1277b54512b63ea8622350a614
+DEBUG 2022-06-01 12:06:09,347 [7    ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: 82b32b1277b54512b63ea8622350a614
+DEBUG 2022-06-01 12:06:09,347 [7    ] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8009
+DEBUG 2022-06-01 12:06:09,347 [7    ] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8009
+DEBUG 2022-06-01 12:06:09,347 [7    ] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8009
+DEBUG 2022-06-01 12:06:09,347 [7    ] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:06:09,347 [7    ] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:06:09,594 [62   ] Abp.Logging.LogHelper                    - receive response of msg: fcd0a339014b41ad8c3fa74f571944ef
+DEBUG 2022-06-01 12:06:09,594 [62   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: fcd0a339014b41ad8c3fa74f571944ef
+INFO  2022-06-01 12:06:12,973 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:12,976 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:13,497 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:13,498 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:06:17,990 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:17,994 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:18,502 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:18,503 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:06:23,008 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:23,014 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:23,512 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:23,512 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:06:23,639 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:06:08.6151642Z;LastJobId:4;NextExecution:2022-06-01T04:06:10.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:06:23.6372346Z;NextExecution:2022-06-01T04:06:25.0000000Z;LastJobId:6), NextExecution: (2022/6/1 4:06:25)
+DEBUG 2022-06-01 12:06:23,640 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:06:28,032 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:28,037 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:28,526 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:28,527 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:06:33,056 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:33,059 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:33,533 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:33,533 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:06:38,073 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:38,076 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:38,415 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e heartbeat successfully sent
+DEBUG 2022-06-01 12:06:38,415 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+DEBUG 2022-06-01 12:06:38,537 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:38,537 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:06:38,653 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:06:23.6372346Z;LastJobId:6;NextExecution:2022-06-01T04:06:25.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:06:38.6475447Z;NextExecution:2022-06-01T04:06:40.0000000Z;LastJobId:7), NextExecution: (2022/6/1 4:06:40)
+DEBUG 2022-06-01 12:06:38,659 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:06:43,109 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:43,118 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:43,539 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:43,539 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:06:48,148 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:48,156 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:48,551 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:48,551 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:06:53,164 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:53,168 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:53,564 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:53,564 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:06:53,679 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:06:38.6475447Z;LastJobId:7;NextExecution:2022-06-01T04:06:40.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:06:53.6743874Z;NextExecution:2022-06-01T04:06:55.0000000Z;LastJobId:8), NextExecution: (2022/6/1 4:06:55)
+DEBUG 2022-06-01 12:06:53,683 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:06:58,180 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:06:58,186 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:06:58,567 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:06:58,567 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:07:03,196 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:03,201 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:03,575 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:03,576 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:07:08,206 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:08,209 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:08,421 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e heartbeat successfully sent
+DEBUG 2022-06-01 12:07:08,421 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+DEBUG 2022-06-01 12:07:08,588 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:08,588 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:07:08,703 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:06:53.6743874Z;LastJobId:8;NextExecution:2022-06-01T04:06:55.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:07:08.6981552Z;NextExecution:2022-06-01T04:07:10.0000000Z;LastJobId:9), NextExecution: (2022/6/1 4:07:10)
+DEBUG 2022-06-01 12:07:08,713 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'ServiceDiscoveryJob_2f2a3ca193ee450c8070455db64eba47' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.8922178Z;Cron:0 * * * * ? ;Job:{"Type":"Soa.Client.Discovery.ServiceDiscoveryJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.Discovery.ServiceDiscoveryJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{}\"]"};LastExecution:2022-06-01T04:06:08.6151642Z;LastJobId:5;NextExecution:2022-06-01T04:07:00.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:07:08.6981552Z;NextExecution:2022-06-01T04:08:00.0000000Z;LastJobId:10), NextExecution: (2022/6/1 4:08:00)
+DEBUG 2022-06-01 12:07:08,716 [er #1] Hangfire.Server.RecurringJobScheduler    - 2 recurring job(s) processed by scheduler.
+DEBUG 2022-06-01 12:07:08,764 [orker] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8007
+DEBUG 2022-06-01 12:07:08,764 [orker] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8007
+DEBUG 2022-06-01 12:07:08,765 [orker] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8007
+DEBUG 2022-06-01 12:07:08,765 [orker] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:07:08,765 [orker] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:07:08,775 [64   ] Abp.Logging.LogHelper                    - receive response of msg: b044dcef97d844dc92b22d1268e4e57a
+DEBUG 2022-06-01 12:07:08,775 [64   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: b044dcef97d844dc92b22d1268e4e57a
+DEBUG 2022-06-01 12:07:08,775 [64   ] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8008
+DEBUG 2022-06-01 12:07:08,775 [64   ] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8008
+DEBUG 2022-06-01 12:07:08,775 [64   ] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8008
+DEBUG 2022-06-01 12:07:08,775 [64   ] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:07:08,775 [64   ] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:07:08,781 [64   ] Abp.Logging.LogHelper                    - receive response of msg: 378a5a7a821b453fab7f9f8b0fb25d6f
+DEBUG 2022-06-01 12:07:08,782 [64   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: 378a5a7a821b453fab7f9f8b0fb25d6f
+DEBUG 2022-06-01 12:07:08,782 [64   ] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8009
+DEBUG 2022-06-01 12:07:08,782 [64   ] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8009
+DEBUG 2022-06-01 12:07:08,782 [64   ] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8009
+DEBUG 2022-06-01 12:07:08,782 [64   ] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:07:08,782 [64   ] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:07:08,787 [64   ] Abp.Logging.LogHelper                    - receive response of msg: 0145dc38c0a542dc99c32bd40925e323
+DEBUG 2022-06-01 12:07:08,787 [64   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: 0145dc38c0a542dc99c32bd40925e323
+INFO  2022-06-01 12:07:13,234 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:13,238 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:13,598 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:13,598 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:07:18,250 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:18,254 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:18,604 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:18,604 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:07:23,272 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:23,275 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:23,609 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:23,610 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:07:23,726 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:07:08.6981552Z;LastJobId:9;NextExecution:2022-06-01T04:07:10.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:07:23.7216400Z;NextExecution:2022-06-01T04:07:25.0000000Z;LastJobId:11), NextExecution: (2022/6/1 4:07:25)
+DEBUG 2022-06-01 12:07:23,728 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:07:28,287 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:28,291 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:28,624 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:28,624 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:07:33,338 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:33,343 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:33,632 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:33,632 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:07:38,359 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:38,395 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:38,425 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e heartbeat successfully sent
+DEBUG 2022-06-01 12:07:38,425 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+DEBUG 2022-06-01 12:07:38,642 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:38,642 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:07:38,738 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:07:23.7216400Z;LastJobId:11;NextExecution:2022-06-01T04:07:25.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:07:38.7358827Z;NextExecution:2022-06-01T04:07:40.0000000Z;LastJobId:12), NextExecution: (2022/6/1 4:07:40)
+DEBUG 2022-06-01 12:07:38,739 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:07:43,401 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:43,404 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:43,644 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:43,644 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:07:48,437 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:48,440 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:48,648 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:48,648 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:07:53,462 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:53,465 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:53,657 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:53,658 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:07:53,760 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:07:38.7358827Z;LastJobId:12;NextExecution:2022-06-01T04:07:40.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:07:53.7536172Z;NextExecution:2022-06-01T04:07:55.0000000Z;LastJobId:13), NextExecution: (2022/6/1 4:07:55)
+DEBUG 2022-06-01 12:07:53,766 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:07:58,484 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:07:58,487 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:07:58,667 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:07:58,667 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:08:03,517 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:03,522 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:03,668 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:03,669 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:08:08,438 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e heartbeat successfully sent
+DEBUG 2022-06-01 12:08:08,438 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+INFO  2022-06-01 12:08:08,540 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:08,545 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:08,670 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:08,671 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:08:08,786 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:07:53.7536172Z;LastJobId:13;NextExecution:2022-06-01T04:07:55.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:08:08.7808825Z;NextExecution:2022-06-01T04:08:10.0000000Z;LastJobId:14), NextExecution: (2022/6/1 4:08:10)
+DEBUG 2022-06-01 12:08:08,796 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'ServiceDiscoveryJob_2f2a3ca193ee450c8070455db64eba47' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.8922178Z;Cron:0 * * * * ? ;Job:{"Type":"Soa.Client.Discovery.ServiceDiscoveryJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.Discovery.ServiceDiscoveryJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{}\"]"};LastExecution:2022-06-01T04:07:08.6981552Z;LastJobId:10;NextExecution:2022-06-01T04:08:00.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:08:08.7808825Z;NextExecution:2022-06-01T04:09:00.0000000Z;LastJobId:15), NextExecution: (2022/6/1 4:09:00)
+DEBUG 2022-06-01 12:08:08,800 [er #1] Hangfire.Server.RecurringJobScheduler    - 2 recurring job(s) processed by scheduler.
+DEBUG 2022-06-01 12:08:08,985 [orker] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8007
+DEBUG 2022-06-01 12:08:08,985 [orker] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8007
+DEBUG 2022-06-01 12:08:08,985 [orker] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8007
+DEBUG 2022-06-01 12:08:08,985 [orker] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:08:08,985 [orker] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:08:08,998 [71   ] Abp.Logging.LogHelper                    - receive response of msg: 512957685e1a49c695ff2777b93604bc
+DEBUG 2022-06-01 12:08:08,998 [71   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: 512957685e1a49c695ff2777b93604bc
+DEBUG 2022-06-01 12:08:09,000 [71   ] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8008
+DEBUG 2022-06-01 12:08:09,000 [71   ] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8008
+DEBUG 2022-06-01 12:08:09,000 [71   ] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8008
+DEBUG 2022-06-01 12:08:09,000 [71   ] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:08:09,000 [71   ] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:08:09,010 [72   ] Abp.Logging.LogHelper                    - receive response of msg: 32354d224e844a9bbe194da9367a23de
+DEBUG 2022-06-01 12:08:09,010 [72   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: 32354d224e844a9bbe194da9367a23de
+DEBUG 2022-06-01 12:08:09,011 [72   ] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8009
+DEBUG 2022-06-01 12:08:09,011 [72   ] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8009
+DEBUG 2022-06-01 12:08:09,011 [72   ] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8009
+DEBUG 2022-06-01 12:08:09,011 [72   ] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:08:09,011 [72   ] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:08:09,015 [72   ] Abp.Logging.LogHelper                    - receive response of msg: 843c2820f29742ddb9e1f6dcd98b5b87
+DEBUG 2022-06-01 12:08:09,015 [72   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: 843c2820f29742ddb9e1f6dcd98b5b87
+INFO  2022-06-01 12:08:13,578 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:13,581 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:13,682 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:13,682 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:08:18,601 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:18,604 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:18,690 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:18,690 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:08:23,618 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:23,622 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:23,699 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:23,700 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:08:23,814 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:08:08.7808825Z;LastJobId:14;NextExecution:2022-06-01T04:08:10.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:08:23.8101135Z;NextExecution:2022-06-01T04:08:25.0000000Z;LastJobId:16), NextExecution: (2022/6/1 4:08:25)
+DEBUG 2022-06-01 12:08:23,819 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:08:28,633 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:28,637 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:28,709 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:28,709 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:08:33,657 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:33,660 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:33,722 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:33,722 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:08:38,445 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e heartbeat successfully sent
+DEBUG 2022-06-01 12:08:38,445 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+INFO  2022-06-01 12:08:38,680 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:38,683 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:38,737 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:38,737 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:08:38,833 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:08:23.8101135Z;LastJobId:16;NextExecution:2022-06-01T04:08:25.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:08:38.8310989Z;NextExecution:2022-06-01T04:08:40.0000000Z;LastJobId:17), NextExecution: (2022/6/1 4:08:40)
+DEBUG 2022-06-01 12:08:38,834 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:08:43,691 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:43,694 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:43,749 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:43,749 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:08:48,721 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:48,727 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:48,750 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:48,750 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:08:53,745 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:08:53,748 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:08:53,757 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:08:53,757 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:08:53,837 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:08:38.8310989Z;LastJobId:17;NextExecution:2022-06-01T04:08:40.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:08:53.8359517Z;NextExecution:2022-06-01T04:08:55.0000000Z;LastJobId:18), NextExecution: (2022/6/1 4:08:55)
+DEBUG 2022-06-01 12:08:53,838 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+DEBUG 2022-06-01 12:08:58,759 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+INFO  2022-06-01 12:08:58,759 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+DEBUG 2022-06-01 12:08:58,759 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:08:58,762 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:09:03,770 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:09:03,770 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:09:03,775 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:09:03,778 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:09:08,452 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e heartbeat successfully sent
+DEBUG 2022-06-01 12:09:08,452 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+DEBUG 2022-06-01 12:09:08,775 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:09:08,775 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:09:08,811 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:09:08,816 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:09:08,846 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:08:53.8359517Z;LastJobId:18;NextExecution:2022-06-01T04:08:55.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:09:08.8415387Z;NextExecution:2022-06-01T04:09:10.0000000Z;LastJobId:19), NextExecution: (2022/6/1 4:09:10)
+DEBUG 2022-06-01 12:09:08,856 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'ServiceDiscoveryJob_2f2a3ca193ee450c8070455db64eba47' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.8922178Z;Cron:0 * * * * ? ;Job:{"Type":"Soa.Client.Discovery.ServiceDiscoveryJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.Discovery.ServiceDiscoveryJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{}\"]"};LastExecution:2022-06-01T04:08:08.7808825Z;LastJobId:15;NextExecution:2022-06-01T04:09:00.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:09:08.8415387Z;NextExecution:2022-06-01T04:10:00.0000000Z;LastJobId:20), NextExecution: (2022/6/1 4:10:00)
+DEBUG 2022-06-01 12:09:08,860 [er #1] Hangfire.Server.RecurringJobScheduler    - 2 recurring job(s) processed by scheduler.
+DEBUG 2022-06-01 12:09:08,971 [orker] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8007
+DEBUG 2022-06-01 12:09:08,971 [orker] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8007
+DEBUG 2022-06-01 12:09:08,971 [orker] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8007
+DEBUG 2022-06-01 12:09:08,971 [orker] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:09:08,972 [orker] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:09:08,987 [78   ] Abp.Logging.LogHelper                    - receive response of msg: 0f36a49ae2dc4c998158f38614fcf547
+DEBUG 2022-06-01 12:09:08,987 [78   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: 0f36a49ae2dc4c998158f38614fcf547
+DEBUG 2022-06-01 12:09:08,988 [78   ] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8008
+DEBUG 2022-06-01 12:09:08,988 [78   ] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8008
+DEBUG 2022-06-01 12:09:08,988 [78   ] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8008
+DEBUG 2022-06-01 12:09:08,988 [78   ] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:09:08,988 [78   ] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:09:08,994 [78   ] Abp.Logging.LogHelper                    - receive response of msg: e303fd67e495420485a39d3238be011c
+DEBUG 2022-06-01 12:09:08,995 [78   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: e303fd67e495420485a39d3238be011c
+DEBUG 2022-06-01 12:09:08,995 [78   ] Abp.Logging.LogHelper                    - Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, request address: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync: 127.0.0.1:8009
+DEBUG 2022-06-01 12:09:08,995 [78   ] Abp.Logging.LogHelper                    - creating transport client for: 127.0.0.1:8009
+DEBUG 2022-06-01 12:09:08,995 [78   ] Abp.Logging.LogHelper                    - succed to create transport client for: 127.0.0.1:8009
+DEBUG 2022-06-01 12:09:08,995 [78   ] Abp.Logging.LogHelper                    - invoke: serviceId:Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, parameters count: 0, token:
+DEBUG 2022-06-01 12:09:08,995 [78   ] Abp.Logging.LogHelper                    - prepare sending: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync
+DEBUG 2022-06-01 12:09:09,002 [78   ] Abp.Logging.LogHelper                    - receive response of msg: 3ecc846f5ad74aea9ca95db67e564bbf
+DEBUG 2022-06-01 12:09:09,002 [78   ] Abp.Logging.LogHelper                    - succed to send: Soa.ServiceDiscovery.InServer.GetRoutesDescAsync, msg: 3ecc846f5ad74aea9ca95db67e564bbf
+DEBUG 2022-06-01 12:09:13,788 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:09:13,788 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:09:13,824 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:09:13,829 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:09:18,798 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:09:18,798 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:09:18,834 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:09:18,838 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:09:23,814 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:09:23,814 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:09:23,851 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:09:23,853 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:09:23,882 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:09:08.8415387Z;LastJobId:19;NextExecution:2022-06-01T04:09:10.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:09:23.8768303Z;NextExecution:2022-06-01T04:09:25.0000000Z;LastJobId:21), NextExecution: (2022/6/1 4:09:25)
+DEBUG 2022-06-01 12:09:23,890 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+DEBUG 2022-06-01 12:09:28,819 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:09:28,820 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:09:28,881 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:09:28,885 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:09:33,832 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:09:33,833 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+INFO  2022-06-01 12:09:33,899 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:09:33,902 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
+DEBUG 2022-06-01 12:09:38,455 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e heartbeat successfully sent
+DEBUG 2022-06-01 12:09:38,455 [ss #1] Hangfire.Server.ServerHeartbeatProcess   - Server desktop-q8b8bcv:13248:99446a7e waiting for 00:00:30 delay before sending a heartbeat
+DEBUG 2022-06-01 12:09:38,841 [er #1] fire.Server.ServerJobCancellationWatcher - Checking for aborted jobs...
+DEBUG 2022-06-01 12:09:38,841 [er #1] fire.Server.ServerJobCancellationWatcher - No newly aborted jobs found.
+DEBUG 2022-06-01 12:09:38,905 [er #1] Hangfire.Server.RecurringJobScheduler    - Recurring job 'HealthCheckJob_a175ad1993e04e2c82dffcb89102ab8b' is being updated. RecurringJob: (CreatedAt:2022-06-01T04:05:10.7145576Z;Cron:0/5 * * * * ? ;Job:{"Type":"Soa.Client.HealthCheck.HealthCheckJob, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null","Method":"ExecuteAsync","ParameterTypes":"[\"Soa.Client.HealthCheck.HealthCheckJobArgs, Soa.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null\"]","Arguments":"[\"{\\\"Timeout\\\":3000}\"]"};LastExecution:2022-06-01T04:09:23.8768303Z;LastJobId:21;NextExecution:2022-06-01T04:09:25.0000000Z;Queue:default;TimeZoneId:China Standard Time;V:2), Changes: (LastExecution:2022-06-01T04:09:38.9024971Z;NextExecution:2022-06-01T04:09:40.0000000Z;LastJobId:22), NextExecution: (2022/6/1 4:09:40)
+DEBUG 2022-06-01 12:09:38,907 [er #1] Hangfire.Server.RecurringJobScheduler    - 1 recurring job(s) processed by scheduler.
+INFO  2022-06-01 12:09:38,909 [orker] osoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.0 initialized 'GatewaySampleDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.0' with options: None
+INFO  2022-06-01 12:09:38,912 [orker] oft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__p_1='?' (DbType = Int32), @__Now_0='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(@__p_1) [a].[Id], [a].[CreationTime], [a].[CreatorUserId], [a].[IsAbandoned], [a].[JobArgs], [a].[JobType], [a].[LastTryTime], [a].[NextTryTime], [a].[Priority], [a].[TryCount]
+FROM [AbpBackgroundJobs] AS [a]
+WHERE ([a].[IsAbandoned] = CAST(0 AS bit)) AND ([a].[NextTryTime] <= @__Now_0)
+ORDER BY [a].[Priority] DESC, [a].[TryCount], [a].[NextTryTime]
