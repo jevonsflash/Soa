@@ -3,6 +3,7 @@ using Soa.Sample.Web;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
+using System.Runtime.InteropServices;
 
 namespace Soa.Sample.EntityFrameworkCore
 {
@@ -16,7 +17,10 @@ namespace Soa.Sample.EntityFrameworkCore
 
             DbContextOptionsConfigurer.Configure(
                 builder,
-                configuration.GetConnectionString(SampleConsts.ConnectionStringName)
+                configuration.GetConnectionString(
+                    RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
+                    "Default_Docker" : SampleConsts.ConnectionStringName
+                    )
             );
 
             return new SampleDbContext(builder.Options);

@@ -6,6 +6,7 @@ using Abp.Reflection.Extensions;
 using Soa.GatewaySample.Configuration;
 using Soa.GatewaySample.EntityFrameworkCore;
 using Soa.GatewaySample.Migrator.DependencyInjection;
+using System.Runtime.InteropServices;
 
 namespace Soa.GatewaySample.Migrator
 {
@@ -26,7 +27,8 @@ namespace Soa.GatewaySample.Migrator
         public override void PreInitialize()
         {
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
-                GatewaySampleConsts.ConnectionStringName
+                RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
+                "Default_Docker" : GatewaySampleConsts.ConnectionStringName
             );
 
             Configuration.BackgroundJobs.IsJobExecutionEnabled = false;

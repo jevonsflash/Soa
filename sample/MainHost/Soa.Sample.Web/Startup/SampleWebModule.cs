@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Microsoft.Extensions.Configuration;
 using Abp.Configuration.Startup;
+using System.Runtime.InteropServices;
 
 namespace Soa.Sample.Web.Startup
 {
@@ -28,7 +29,11 @@ namespace Soa.Sample.Web.Startup
 
         public override void PreInitialize()
         {
-            Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(SampleConsts.ConnectionStringName);
+            Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
+                  RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
+                "Default_Docker" : SampleConsts.ConnectionStringName
+
+                );
 
             Configuration.Navigation.Providers.Add<SampleNavigationProvider>();
 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using Abp.Events.Bus;
@@ -32,7 +33,10 @@ namespace Soa.Sample.Service1.Host
 
         public override void PreInitialize()
         {
-            Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString("Default");
+            Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
+                    RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
+                    "Default_Docker" : "Default"
+                );
             Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
             
         }

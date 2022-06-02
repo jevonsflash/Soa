@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Soa.Sample.AuthorizedService.Configuration;
 using Soa.Sample.AuthorizedService.Web;
+using System.Runtime.InteropServices;
 
 namespace Soa.AuthorizedService.EntityFrameworkCore
 {
@@ -16,7 +17,10 @@ namespace Soa.AuthorizedService.EntityFrameworkCore
 
             DbContextOptionsConfigurer.Configure(
                 builder,
-                configuration.GetConnectionString("Default")
+                configuration.GetConnectionString(
+                     RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
+                    "Default_Docker" : "Default"
+                    )
             );
 
             return new AuthorizedServiceDbContext(builder.Options);

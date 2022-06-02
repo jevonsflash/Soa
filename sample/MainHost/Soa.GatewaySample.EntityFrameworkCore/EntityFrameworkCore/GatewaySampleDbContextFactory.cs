@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Soa.GatewaySample.Configuration;
 using Soa.GatewaySample.Web;
+using System.Runtime.InteropServices;
 
 namespace Soa.GatewaySample.EntityFrameworkCore
 {
@@ -21,7 +22,11 @@ namespace Soa.GatewaySample.EntityFrameworkCore
              */
             var configuration = AppConfigurations.Get(WebContentDirectoryFinder.CalculateContentRootFolder());
 
-            GatewaySampleDbContextConfigurer.Configure(builder, configuration.GetConnectionString(GatewaySampleConsts.ConnectionStringName));
+            GatewaySampleDbContextConfigurer.Configure(builder, configuration.GetConnectionString(
+                RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
+                "Default_Docker" : GatewaySampleConsts.ConnectionStringName
+
+                ));
 
             return new GatewaySampleDbContext(builder.Options);
         }

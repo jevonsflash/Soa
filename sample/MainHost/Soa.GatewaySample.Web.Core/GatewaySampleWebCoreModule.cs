@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Mvc.ApplicationParts;
 using Abp.Configuration.Startup;
 using Soa.Sample.IAuthorizedService.Authorization;
 using System.Reflection;
+using System.Runtime.InteropServices;
 
 namespace Soa.GatewaySample
 {
@@ -40,7 +41,9 @@ namespace Soa.GatewaySample
         public override void PreInitialize()
         {
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
-                GatewaySampleConsts.ConnectionStringName
+                  RuntimeInformation.IsOSPlatform(OSPlatform.Linux) ?
+                "Default_Docker" : GatewaySampleConsts.ConnectionStringName
+
             );
 
             // Use database for language management

@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Soa.Server;
 using Soa.Sample.EntityFrameworkCore;
+using System.Runtime.InteropServices;
 
 namespace Soa.Sample.Service2.Host
 {
@@ -33,7 +34,8 @@ namespace Soa.Sample.Service2.Host
         {
             //配置数据库
             Configuration.DefaultNameOrConnectionString = _appConfiguration.GetConnectionString(
-                "Default"
+                RuntimeInformation.IsOSPlatform(OSPlatform.Linux)?
+                "Default_Docker" : "Default"
             );
 
             Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
