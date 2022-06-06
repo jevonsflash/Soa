@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "https://localhost:44311/",
+      "applicationUrl": "http://localhost:44311/",
       "sslPort": 44311
     }
   },
@@ -18,11 +18,11 @@
     "Soa.GatewaySample.Web.Host": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "https://localhost:44311/",
+      "launchUrl": "http://localhost:44311/",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:44311/"
+      "applicationUrl": "http://localhost:44311/"
     },
     "Docker": {
       "commandName": "Docker",
