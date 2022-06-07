@@ -1,31 +1,25 @@
-<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk;Microsoft.NET.Sdk.Publish">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..\..</DockerfileContext>
   </PropertyGroup>
-
   <ItemGroup>
     <None Remove="appsettings.json" />
   </ItemGroup>
-
   <ItemGroup>
     <Content Include="appsettings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="Abp" Version="7.1.0" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.1" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\..\src\Soa.Server\Soa.Server.csproj" />
     <ProjectReference Include="..\Soa.Sample.AuthorizedService.EntityFrameworkCore\Soa.Sample.AuthorizedService.EntityFrameworkCore.csproj" />
     <ProjectReference Include="..\Soa.Sample.AuthorizedService\Soa.Sample.AuthorizedService.csproj" />
   </ItemGroup>
-
 </Project>

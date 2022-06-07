@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Soa.GatewaySample.Migrator": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
