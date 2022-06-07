@@ -43,9 +43,11 @@ grissomlau 的项目 [jimu](https://github.com/grissomlau/jimu)
 Date | Version | Content
 :----------: | :-----------: | :-----------
 V0.9.0         | 2022-5-17     | 初始版本
-
+V0.9.1         | 2022-6-7     | Sample添加对Docker的支持
 
 ## 快速开始
+
+接下来简单介绍利用Soa库改造一个基于Asp Boilerplate项目的过程，完整示例请参考 [Sample](https://github.com/MatoApps/Soa/tree/master/sample)
 ### 网关（客户端） GatewaySample
 
 * 添加对Soa库的引用
